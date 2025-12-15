@@ -11,10 +11,20 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
+    <div className="min-h-screen flex flex-col bg-gray-100 text-gray-800">
 
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+
+      <Header />
+
+
+      <main className="flex-grow container mx-auto p-6 flex flex-col items-center justify-center">
+        <p> Hello world !</p>
+      </main>
+
+
+      <Footer />
+
+    </div>
   )
 }
 
