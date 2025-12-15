@@ -3,7 +3,7 @@ export default function Header() {
         <header className="bg-gray-800 text-white p-4 shadow-md">
             <nav className="container mx-auto flex justify-between items-center">
                 {/* Logo ou Titre */}
-                <h1 className="text-2xl font-bold">Discord de gauche</h1>
+                <h1 className="text-2xl font-bold">La Barricade </h1>
 
                 {/* Liens de navigation (exemples) */}
                 <ul className="flex gap-4">
