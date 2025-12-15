@@ -2,7 +2,7 @@ export default function Header() {
     return (
         <header className="bg-gray-800 text-white p-4 shadow-md">
             <nav className="container mx-auto flex justify-between items-center">
-                {/* Logo ou Titre */}
+                {/* <img src={BarricadeLogo} alt="Logo Barricade" className="w-8 h-8"/> */}
                 <h1 className="text-2xl font-bold">La Barricade </h1>
 
                 {/* Liens de navigation (exemples) */}
