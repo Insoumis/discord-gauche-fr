@@ -17,8 +17,10 @@ function App() {
       <Header />
 
 
-      <main className="flex-grow container mx-auto p-6 flex flex-col items-center justify-center">
-        <p> Hello world !</p>
+      <main className="flex-grow container bg-black-100 mx-auto flex flex-col items-center justify-center">
+        <nav>
+
+        </nav>
       </main>
 
 
