@@ -10,26 +10,24 @@ export default function Header() {
     };
 
     return (
-        <header className="bg-gray-800 text-white p-4 shadow-md">
+        <header className="bg-[#8f188fff] text-white p-4 shadow-md">
             <nav className="container mx-auto flex flex-wrap justify-between items-center">
-                {/* Ligne principale (Logo + Bouton Hamburger) */}
+
                 <h1 className="text-2xl font-bold">La Barricade</h1>
 
-                {/* 2. Bouton Hamburger (Visible seulement sur mobile) */}
+
                 <button
                     onClick={toggleMenu}
                     className="sm:hidden p-2 rounded-md hover:bg-gray-700 transition duration-150"
                     aria-label="Toggle menu"
                     aria-expanded={isMenuOpen}
                 >
-                    {/* Les 3 barres superposées */}
+
                     <div className="w-6 h-0.5 bg-white my-1 transition-transform duration-300 ease-in-out" />
                     <div className="w-6 h-0.5 bg-white my-1 transition-opacity duration-300 ease-in-out" />
                     <div className="w-6 h-0.5 bg-white my-1 transition-transform duration-300 ease-in-out" />
 
-                    {/* Astuce : Pour un "X" plus stylé, on pourrait utiliser des classes 
-                       * conditionnelles pour transformer les barres. (Exemple non implémenté ici pour simplicité)
-                    */}
+
                 </button>
 
                 {/* 3. Liens de navigation */}
@@ -43,11 +41,14 @@ export default function Header() {
 
             {/* 4. Menu déroulant pour mobile (Affichage conditionnel) */}
             {isMenuOpen && (
-                <div className="sm:hidden w-full bg-gray-700 mt-4 rounded-b-md shadow-lg">
+                // Remplacez 'hover:bg-purple-900' par 'hover:bg-[#6c0b79d9]'
+                // (#6c0b79d9 est la couleur de votre bordure, qui est un violet opaque parfait pour le survol)
+
+                <div className="sm:hidden w-full bg-[#9e128ba4] mt-4 rounded-b-md shadow-lg">
                     <ul className="flex flex-col">
-                        <li className="p-3 border-b border-gray-600 hover:bg-gray-600 cursor-pointer">Accueil</li>
-                        <li className="p-3 border-b border-gray-600 hover:bg-gray-600 cursor-pointer">À propos</li>
-                        <li className="p-3 hover:bg-gray-600 cursor-pointer">Contact</li>
+                        <li className="p-3 border-b border-[#6c0b79d9] hover:bg-[#6c0b79] cursor-pointer transition duration-300">Accueil</li>
+                        <li className="p-3 border-b border-[#6c0b79d9] hover:bg-[#6c0b79] cursor-pointer transition duration-300">À propos</li>
+                        <li className="p-3 hover:bg-[#6c0b79] cursor-pointer transition duration-300">Contact</li>
                     </ul>
                 </div>
             )}
