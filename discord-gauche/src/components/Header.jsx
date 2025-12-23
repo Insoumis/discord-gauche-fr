@@ -3,6 +3,11 @@ import { useState } from 'react';
 // CORRECTION IMPORT : Utilisation de '../assets/'
 import FacebookLogo from '../assets/facebook.png';
 import InstagramLogo from '../assets/instagram.png';
+import YoutubeLogo from '../assets/youtube.png';
+import TwitterLogo from '../assets/twitter.png';
+import DiscordLogo from '../assets/discord.png';
+import Tiktoklogo from '../assets/Tiktok.png';
+import TwitchLogo from '../assets/twitch.svg';
 
 export default function Header() {
     // 1. État pour gérer l'ouverture/fermeture du menu mobile
@@ -46,6 +51,71 @@ export default function Header() {
                             <img src={InstagramLogo} alt="Instagram Logo" className="w-6 h-6" />
                         </a>
 
+                           {/* TikTok */}
+                        <a
+                            href="https://www.tiktok.com/@distok_populaire"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                            className="text-white hover:opacity-75 transition duration-150"
+                        >
+                            <img src={Tiktoklogo} alt="Tiktok Logo" className="w-6 h-6" />
+                        </a>
+
+                           {/* Youtube*/}
+                        <a
+                            href="https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCeoMxgbBbm9JdEez21bd1mw%2Fvideos%3Fcbrd%3D1&gl=FR&m=0&pc=yt&cm=2&hl=fr&src=1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                            className="text-white hover:opacity-75 transition duration-150"
+                        >
+                            <img src={YoutubeLogo} alt="Youtube Logo" className="w-6 h-6" />
+                        </a>
+
+                           {/* Twitch */}
+                        <a
+                            href="https://www.twitch.tv/la_barricade"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                            className="text-white hover:opacity-75 transition duration-150"
+                        >
+                            <img src={TwitchLogo} alt="Twitch Logo" className="w-6 h-6" />
+                        </a>
+
+                                {/* Twitter */}
+                        <a
+                            href="https://x.com/DiscordGauche"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                            className="text-white hover:opacity-75 transition duration-150"
+                        >
+                            <img src={TwitterLogo} alt="Twitter Logo" className="w-6 h-6" />
+                        </a>
+
+                                {/* Mastodon */}
+                        <a
+                            href=" https://piaille.fr/@DiscordGauche"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                            className="text-white hover:opacity-75 transition duration-150"
+                        >
+                            <img src={FacebookLogo} alt="Mastodon Logo" className="w-6 h-6" />
+                        </a>
+
+                                {/* Bluesky*/}
+                        <a
+                            href="https://bsky.app/profile/discordgauche.bsky.social "
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                            className="text-white hover:opacity-75 transition duration-150"
+                        >
+                            <img src={FacebookLogo} alt="Bluesky Logo" className="w-6 h-6" />
+                        </a>
                     </div>
                 </div>
 
