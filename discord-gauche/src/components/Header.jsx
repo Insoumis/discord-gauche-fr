@@ -8,6 +8,8 @@ import TwitterLogo from '../assets/twitter.png';
 import DiscordLogo from '../assets/discord.png';
 import Tiktoklogo from '../assets/Tiktok.png';
 import TwitchLogo from '../assets/twitch.svg';
+import BskyLogo from '../assets/Bluesky.png';
+import MastoLogo from '../assets/masto.png'
 
 export default function Header() {
     // 1. État pour gérer l'ouverture/fermeture du menu mobile
@@ -28,6 +30,17 @@ export default function Header() {
 
                     {/* TEMPLATE POUR LES RÉSEAUX SOCIAUX (Desktop) */}
                     <div className="hidden sm:flex items-center space-x-3">
+
+                            {/* Discord */}
+                        <a
+                            href="https://discord.gg/barricade"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Discord"
+                            className="text-white hover:opacity-75 transition duration-150"
+                        >
+                            <img src={DiscordLogo} alt="Facebook Logo" className="w-6 h-6" />
+                        </a>
 
                         {/* Facebook */}
                         <a
@@ -56,7 +69,7 @@ export default function Header() {
                             href="https://www.tiktok.com/@distok_populaire"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Facebook"
+                            aria-label="TikTok"
                             className="text-white hover:opacity-75 transition duration-150"
                         >
                             <img src={Tiktoklogo} alt="Tiktok Logo" className="w-6 h-6" />
@@ -67,7 +80,7 @@ export default function Header() {
                             href="https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCeoMxgbBbm9JdEez21bd1mw%2Fvideos%3Fcbrd%3D1&gl=FR&m=0&pc=yt&cm=2&hl=fr&src=1"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Facebook"
+                            aria-label="Youtube"
                             className="text-white hover:opacity-75 transition duration-150"
                         >
                             <img src={YoutubeLogo} alt="Youtube Logo" className="w-6 h-6" />
@@ -78,7 +91,7 @@ export default function Header() {
                             href="https://www.twitch.tv/la_barricade"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Facebook"
+                            aria-label="Twitch"
                             className="text-white hover:opacity-75 transition duration-150"
                         >
                             <img src={TwitchLogo} alt="Twitch Logo" className="w-6 h-6" />
@@ -89,7 +102,7 @@ export default function Header() {
                             href="https://x.com/DiscordGauche"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Facebook"
+                            aria-label="Twitter"
                             className="text-white hover:opacity-75 transition duration-150"
                         >
                             <img src={TwitterLogo} alt="Twitter Logo" className="w-6 h-6" />
@@ -100,10 +113,10 @@ export default function Header() {
                             href=" https://piaille.fr/@DiscordGauche"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Facebook"
+                            aria-label="Mastodon"
                             className="text-white hover:opacity-75 transition duration-150"
                         >
-                            <img src={FacebookLogo} alt="Mastodon Logo" className="w-6 h-6" />
+                            <img src={MastoLogo} alt="Mastodon Logo" className="w-6 h-6" />
                         </a>
 
                                 {/* Bluesky*/}
@@ -114,7 +127,7 @@ export default function Header() {
                             aria-label="Facebook"
                             className="text-white hover:opacity-75 transition duration-150"
                         >
-                            <img src={FacebookLogo} alt="Bluesky Logo" className="w-6 h-6" />
+                            <img src={BskyLogo} alt="Bluesky Logo" className="w-6 h-6" />
                         </a>
                     </div>
                 </div>
