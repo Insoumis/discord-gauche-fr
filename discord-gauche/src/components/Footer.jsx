@@ -9,7 +9,6 @@ import Tiktoklogo from '../assets/Tiktok.png';
 import TwitchLogo from '../assets/twitch.svg';
 import BskyLogo from '../assets/bluesky.png';
 import MastoLogo from '../assets/masto.png'
-import BarricadePP from '../assets/PP.png'
 
 export default function Header() {
 
@@ -26,7 +25,7 @@ export default function Header() {
             {/* TEMPLATE POUR LES RÉSEAUX SOCIAUX (Desktop) */}
             <div className="hidden sm:flex items-center space-x-3">
 
-                <img src={BarricadePP} alt="Barricade Logo" className="w-12 h-12 shadow-md/100" />
+                <img src="/PP.png" alt="Barricade Logo" className="w-12 h-12 shadow-md/100" />
                 {/* Twitch */}
                 <a
                     href="https://www.twitch.tv/la_barricade"
