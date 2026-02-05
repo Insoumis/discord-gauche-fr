@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+#root, body {
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: Mohave;
+    src: url("./assets/Mohave/static/Mohave-Regular.ttf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Mohave;
+    src: url("./assets/Mohave/static/Mohave-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Grotesk;
+    src: url("./assets/Host_Grotesk/static/HostGrotesk-ExtraBold.ttf");
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: Grotesk;
+    src: url("./assets/Host_Grotesk/static/HostGrotesk-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Grotesk;
+    src: url("./assets/Host_Grotesk/static/HostGrotesk-Regular.ttf");
+    font-weight: normal;
+}
+
+@theme {
+    --color-blanc: #ffffff;
+    --color-noir: #16151d;
+    --color-violet: #622da6;
+    --color-rouge: #cd433a;
+    --color-jaune: #f5ae21;
+    --color-cyan: #34cadd;
+    --color-vert: #00a543;
+    --color-rose: #e5628f;
+    --color-bleu: #3340b6;
+    --color-orange: #e4792a;
+}
