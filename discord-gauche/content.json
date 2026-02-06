@@ -32,12 +32,12 @@
                 },
                 {
                     "link": "https://web.archive.org/web/20201230162752/http://fiscalkombat.eu/",
-                    "title": "Jouer à la version 2018 (via archive.org)",
+                    "title": "Jouer à la version 2019 (via archive.org)",
                     "icon": "pointer"
                 },
                 {
                     "link": "/Fiscal+Kombat+European+Edition_1.02_apkcombo.com.apk",
-                    "title": "Télécharger la version mobile 2018 (.apk Android)",
+                    "title": "Télécharger la version mobile 2019 (.apk Android)",
                     "icon": "download"
                 }
             ]
@@ -89,6 +89,22 @@
                     "icon": "pointer"
                 }
             ]
+        },
+        {
+            "id": "100-jours",
+            "title": "100 jours",
+            "description": "Vivez 100 jours (ou plus ?) d'une aventure politique fantastique",
+            "image": "/covers/100-jours.png",
+            "banner": "https://100jours-nupes.fr/splashscreen_sanstexte.png",
+            "year": "2022",
+            "tags": [],
+            "access": [
+                {
+                    "link": "https://100jours-nupes.fr/",
+                    "title": "Jouer !",
+                    "icon": "pointer"
+                }
+            ]
         }
     ],
     "shelves": {
@@ -100,7 +116,8 @@
         "games": [
             "foule-populaire",
             "laec-est-toi",
-            "fiscal-kombat"
+            "fiscal-kombat",
+            "100-jours"
         ]
     }
 }

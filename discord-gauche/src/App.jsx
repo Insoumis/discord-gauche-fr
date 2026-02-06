@@ -5,6 +5,7 @@ import Post from './components/Post'
 import './index.css'
 import Shelf from './components/Shelf'
 import { getContent, getContentEntry } from './utils/content'
+import { FaGamepad } from 'react-icons/fa6'
 
 function App() {
   // Juste tes données de base
@@ -41,7 +42,7 @@ function App() {
           <Shelf posts={posts.featured} set="featured" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} emphasis />
 
           {/* Liste des jeux */}
-          <h1 className="ml-6 mb-2 text-2xl font-extrabold">Les Jeux</h1>
+          <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaGamepad /> Les Jeux</h1>
           <Shelf posts={posts.games} set="games" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />
         </main>
       )}
