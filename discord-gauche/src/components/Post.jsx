@@ -4,7 +4,7 @@ export default ({ post, close }) => (
     <div className={`absolute flex flex-col bg-noir inset-0 text-blanc transition-all duration-500 ${!post ? 'invisible opacity-0' : 'opacity-100'}`} >
         {post && (
             <div
-                className="absolute w-full l-0 t-0 r-0 h-[300px] bg-center bg-cover z-0"
+                className="absolute w-full l-0 t-0 r-0 h-[200px] md:h-[300px] bg-center bg-cover z-0"
                 style={{ backgroundImage: `url(${post.banner})` }}
             />
         )}

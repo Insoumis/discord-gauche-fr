@@ -33,7 +33,6 @@ function App() {
         />
       )))}
 
-
       {/* 2. Zone centrale : prend l'espace restant et scroll si besoin */}
       {!selectedPost && (
         <main className="flex flex-col py-18 overflow-hidden overflow-y-scroll text-blanc absolute top-0 bottom-0 right-0 left-0">
