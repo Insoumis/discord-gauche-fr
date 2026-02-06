@@ -4,73 +4,22 @@ import Footer from './components/Footer'
 import Barricade from './assets/Barricade.jpg'
 import './index.css'
 import Shelf from './components/Shelf'
+import { getContent } from './utils/content'
 
 function App() {
   // Juste tes données de base
-  const [posts, setPosts] = useState({
-    featured: [
-      {
-        id: "laec-fr",
-        title: "LAEC.FR",
-        description: "Le site du programme l'Avenir en Commun !",
-        image: "https://melenshack.fr/images/F2zQySCm.png",
-        banner: "https://melenshack.fr/images/F2zQySCm.png",
-        tag: ""
-      },
-      {
-        id: "fiscal-kombat",
-        title: "Fiscal Kombat",
-        description: "Secouez les milliardaires",
-        image: "https://melenshack.fr/images/uRh1u601.jpg",
-        banner: "https://melenshack.fr/images/NpD9ZhWK.gif",
-        tag: ""
-      },
-      {
-        id: "la-manufacture",
-        title: "La Manufacture",
-        description: "L'association qui construit des outils militants",
-        image: "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:lvkzx6af56yc6p5kn4t2rwy3/bafkreibp2i4byltxm6tkfmtgdaskql5ddxbmt6al2mbff7klkbzblts5ue@jpeg",
-        banner: "https://cdn.helloasso.com/img/photos/final-9041ac8f9d9d4884b2995676c28e7477.png",
-        tag: ""
-      }
-    ],
-    games: [
-      {
-        id: "foule-populaire",
-        title: "Foule Populaire",
-        description: "Le Jeu de la campagne du Nouveau Front Populaire",
-        image: "https://foulepopulaire.fr/_ipx/_/img/perso_alpha.png",
-        banner: "https://foulepopulaire.fr/_ipx/_/img/KA_desktop.png",
-        tag: ""
-      },
-      {
-        id: "fiscal-kombat",
-        title: "Fiscal Kombat",
-        description: "Secouez les milliardaires",
-        image: "https://melenshack.fr/images/uRh1u601.jpg",
-        banner: "https://melenshack.fr/images/NpD9ZhWK.gif",
-        tag: ""
-      },
-      {
-        id: "laec-est-toi",
-        title: "LAEC est TOI",
-        description: "Découvre le programme via une série de puzzles inspirants",
-        image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ff4.bcbits.com%2Fimg%2Fa1485848684_10.jpg&f=1&nofb=1&ipt=cc3079cdfa75a0da41f5500a46754e421cf2f84c25db8d1b7ad93c9456ee8446",
-        banner: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvODM2MTM4Lzg0MjA1NzAucG5n%2Foriginal%2Fbo2LRj.png&f=1&nofb=1&ipt=6cda9965878d678bf9826423d589c11875e418057151741564661dd61081bda0",
-        tag: ""
-      },
-    ]
-  })
+  const [posts, setPosts] = useState(getContent())
 
-  const [selectedBackground, setselectedBackground] = useState({ set: "", idx: 0 })
+  const [selectedBackground, setselectedBackground] = useState("")
 
   return (
     // 1. Structure fixe : hauteur écran bloquée
     <div className="h-screen flex flex-col bg-noir text-gray-800 overflow-hidden font-[Grotesk]">
-      {Object.keys(posts).map(set => posts[set].map((post, idx) => (
+      {Object.keys(posts).map(set => posts[set].map((post) => (
         <div
+          key={`banner-${post.id}`}
           className="absolute w-full h-[700px] bg-cover mask-b-from-10% mask-b-to-80% opacity-30 transition-all duration-500"
-          style={{ backgroundImage: `url(${post.banner})`, opacity: selectedBackground.set === set && selectedBackground.idx === idx ? "30%" : "0%" }}
+          style={{ backgroundImage: `url(${post.banner})`, opacity: selectedBackground === post.id ? "30%" : "0%" }}
         />
       )))}
 

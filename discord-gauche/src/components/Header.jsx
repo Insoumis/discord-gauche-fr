@@ -29,10 +29,10 @@ export default function Header() {
             <nav className="mx-auto flex-1 flex flex-wrap justify-between items-center">
                 {/* Bloc de navigation gauche (Logo + Réseaux Sociaux) */}
                 <span className="w-[10px]" />
-                <label for="search-bar" className="cursor-pointer p-[10px] ml-auto text-blanc transition-all duration-500 hover:bg-blanc hover:text-noir rounded-full"><FaMagnifyingGlass className="text-2xl" /></label>
-                <input tabindex="1" id="search-bar" className="font-[Grotesk] transition-all duration-500 w-[0px] focus:ml-[10px] focus:p-[2px] focus:flex-1 flex items-center appearance-none text-noir border-b-2 border-blanc focus:border-solid outline-none focus:bg-blanc" />
+                <label htmlFor="search-bar" className="cursor-pointer p-[10px] ml-auto text-blanc transition-all duration-500 hover:bg-blanc hover:text-noir rounded-full"><FaMagnifyingGlass className="text-2xl" /></label>
+                <input tabIndex="1" id="search-bar" className="font-[Grotesk] transition-all duration-500 w-[0px] focus:ml-[10px] focus:p-[2px] focus:flex-1 flex items-center appearance-none text-noir border-b-2 border-blanc focus:border-solid outline-none focus:bg-blanc" />
                 <b className="ml-[20px]">{time}</b>
-                <a tabindex="2" href="#" className="imageAnchor mx-[10px] cursor-pointer focus:bg-noir focus:invert hover:bg-noir hover:invert p-[10px] transition-all duration-500 rounded-full outline-none">
+                <a tabIndex="2" href="#" className="imageAnchor mx-[10px] cursor-pointer focus:bg-noir focus:invert hover:bg-noir hover:invert p-[10px] transition-all duration-500 rounded-full outline-none">
                     <img src={LogoBarricade} alt="Le logo de la Barricade" className="w-[100px]" />
                 </a>
                 {/* Bloc Bouton Menu Mobile (Burger) */}
