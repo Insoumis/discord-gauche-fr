@@ -117,7 +117,7 @@ export default function Header() {
                 href="https://discord.gg/barricade"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-auto bg-rouge hover:bg-rouge/50 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
+                className="mx-auto md:mr-0 bg-rouge hover:bg-rouge/50 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
             >
                 {/* Logo Discord SVG */}
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

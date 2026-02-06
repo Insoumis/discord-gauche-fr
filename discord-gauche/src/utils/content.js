@@ -1,6 +1,7 @@
 import CONTENT from "../../content.json"
 
 export function getContentEntry(id) {
+    if (!id) return null
     return CONTENT.entries.filter(entry => entry.id === id)[0]
 }
 
