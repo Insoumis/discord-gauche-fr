@@ -13,7 +13,8 @@ function App() {
   const [posts, setPosts] = useState(getContent())
   const [selectedBackground, setSelectedBackground] = useState("")
   const [selectedPost, setSelectedPost] = useState(null)
-  const [aboutOpened, setAboutOpened] = useState(false)
+  const [aboutOpened, setAboutOpened] = useState(!localStorage.getItem("dejavu"))
+  localStorage.setItem("dejavu", true)
 
   const handleEscape = (event) => {
     if (event.key === 'Escape') {
