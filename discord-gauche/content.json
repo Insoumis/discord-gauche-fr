@@ -17,6 +17,11 @@
                     "link": "https://laec.fr",
                     "title": "Consulter",
                     "icon": "pointer"
+                },
+                {
+                    "link": "https://bd.laec.fr/",
+                    "title": "Accéder à la version bande dessinée",
+                    "icon": "pointer"
                 }
             ]
         },
@@ -52,7 +57,7 @@
                     "icon": "pointer"
                 },
                 {
-                    "link": "/Fiscal+Kombat+European+Edition_1.02_apkcombo.com.apk",
+                    "link": "/resources/Fiscal+Kombat+European+Edition_1.02_apkcombo.com.apk",
                     "title": "Télécharger la version mobile 2019 (.apk Android)",
                     "icon": "download"
                 }
@@ -258,6 +263,47 @@
                     "icon": "pointer"
                 }
             ]
+        },
+        {
+            "id": "rassemblement-nepotiste",
+            "title": "Rassemblement Népostiste",
+            "description": "Une cartographie du RN et de son héritage fasciste",
+            "image": "/covers/rassemblement-nepotiste.png",
+            "banner": "/rassemblement-nepotiste.png",
+            "year": "2024",
+            "tags": [
+                "VISUEL",
+                "RN",
+                "CARTE",
+                "LE PEN"
+            ],
+            "access": [
+                {
+                    "link": "/resources/rassemblement-nepotiste.jpeg",
+                    "title": "Consulter",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "gaza-famine",
+            "title": "Gaza : La Famine est déclarée",
+            "description": "L'épisode de famine qui touche Gaza est un aspect à retardement, autant tragique que fondamental du génocide à l'oeuvre en Palestine 🇵🇸",
+            "image": "/covers/gaza-famine.jpg",
+            "banner": "/covers/gaza-famine.jpg",
+            "year": "2025",
+            "tags": [
+                "VISUEL",
+                "GAZA",
+                "PALESTINE"
+            ],
+            "access": [
+                {
+                    "link": "https://bsky.app/profile/discordgauche.bsky.social/post/3lxkmwh53522m",
+                    "title": "Consulter sur Bluesky",
+                    "icon": "pointer"
+                }
+            ]
         }
     ],
     "shelves": {
@@ -285,6 +331,10 @@
         ],
         "videos": [
             "melenchon-v-zemmour"
+        ],
+        "images": [
+            "rassemblement-nepotiste",
+            "gaza-famine"
         ]
     }
 }

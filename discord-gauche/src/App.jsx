@@ -5,7 +5,7 @@ import Post from './components/Post'
 import './index.css'
 import Shelf from './components/Shelf'
 import { getContent, getContentEntry, searchContent } from './utils/content'
-import { FaFilm, FaGamepad, FaHeadphones, FaInternetExplorer } from 'react-icons/fa6'
+import { FaFilm, FaGamepad, FaHeadphones, FaInternetExplorer, FaPalette } from 'react-icons/fa6'
 import About from './components/About'
 
 function App() {
@@ -74,12 +74,16 @@ function App() {
           {!!posts.websites.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaInternetExplorer /> Les Sites/Outils Web</h1>}
           {!!posts.websites.length && <Shelf posts={posts.websites} set="websites" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
 
-          {/* Liste des vidéos */}
+          {/* Liste des sons */}
           {!!posts.music.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaHeadphones /> Les Sons</h1>}
           {!!posts.music.length && <Shelf posts={posts.music} set="music" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
 
-          {/* Liste des sons */}
-          {!!posts.videos.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaFilm /> Les Montages cringe</h1>}
+          {/* Liste des visuels */}
+          {!!posts.images.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaPalette /> Les Visuels</h1>}
+          {!!posts.images.length && <Shelf posts={posts.images} set="images" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
+
+          {/* Liste des vidéos */}
+          {!!posts.videos.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaFilm /> Les Montages</h1>}
           {!!posts.videos.length && <Shelf posts={posts.videos} set="videos" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
         </main>
       )}
