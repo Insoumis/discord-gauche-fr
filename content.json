@@ -304,6 +304,29 @@
                     "icon": "pointer"
                 }
             ]
+        },
+        {
+            "id": "chiffrage-nfp",
+            "title": "NFP : le chiffrage du programme",
+            "description": "Une version animée qui détaille le chiffrage du programme du Nouveau Front Populaire",
+            "image": "/covers/chiffrage-nfp.png",
+            "banner": "/covers/chiffrage-nfp.png",
+            "year": "2025",
+            "tags": [
+                "ANIMATION"
+            ],
+            "access": [
+                {
+                    "link": "/resources/chiffrage_nfp.mp4",
+                    "title": "Visionner",
+                    "icon": "play"
+                },
+                {
+                    "link": "https://x.com/DiscordGauche/status/1808215270286414122/video/1",
+                    "title": "Voir sur X",
+                    "icon": "pointer"
+                }
+            ]
         }
     ],
     "shelves": {
@@ -334,7 +357,8 @@
         ],
         "images": [
             "rassemblement-nepotiste",
-            "gaza-famine"
+            "gaza-famine",
+            "chiffrage-nfp"
         ]
     }
 }
