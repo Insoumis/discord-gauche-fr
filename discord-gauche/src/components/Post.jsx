@@ -26,6 +26,7 @@ export default ({ post, close }) => (
                 <div className="flex flex-row flex-wrap mt-[20px] gap-[20px]">
                     {post.access.map(btn =>
                         <a
+                            key={btn.link}
                             href={btn.link}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -42,7 +43,7 @@ export default ({ post, close }) => (
             </div>
         )}
 
-        <a href="#" alt="close" onClick={close} className="absolute z-1 right-[20px] top-[50px] text-3xl bg-noir hover:bg-noir/50 hover:scale-110 rounded-full p-[10px] cursor-pointer transition-all duration-300 transform"><FaXmark /></a>
+        <a href="#" alt="close" onClick={close} className="absolute z-1 right-[20px] top-[5px] text-3xl bg-noir hover:bg-noir/50 hover:scale-110 rounded-full p-[10px] cursor-pointer transition-all duration-300 transform"><FaXmark /></a>
     </div>
 
 )

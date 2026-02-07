@@ -7,7 +7,7 @@
             "image": "/covers/laec.png",
             "banner": "/ScreenshotLAEC.png",
             "year": "2022",
-            "tags": [],
+            "tags": ["PROGRAMME", "AVENIR", "SITE"],
             "access": [
                 {
                     "link": "https://laec.fr",
@@ -23,7 +23,7 @@
             "image": "https://melenshack.fr/images/uRh1u601.jpg",
             "banner": "https://melenshack.fr/images/NpD9ZhWK.gif",
             "year": "2017",
-            "tags": [],
+            "tags": ["JEU", "MELENCHON", "JLM", "RICHES", "SECOUER", "FISKAL", "FISCAL COMBAT", "AUBRY", "MANON", "JEAN LUC", "MOBILE"],
             "access": [
                 {
                     "link": "https://bobysait.com/fiscalkombat.fr/web/",
@@ -49,7 +49,7 @@
             "image": "/covers/manufacture.png",
             "banner": "https://cdn.helloasso.com/img/photos/final-9041ac8f9d9d4884b2995676c28e7477.png",
             "year": "2025",
-            "tags": [],
+            "tags": ["LAMA", "TOKTOK", "OUTIL", "WEB", "SITE"],
             "access": [
                 {
                     "link": "https://la-manufacture.io/",
@@ -65,7 +65,7 @@
             "image": "/covers/foule-populaire.png",
             "banner": "https://foulepopulaire.fr/_ipx/_/img/KA_desktop.png",
             "year": "2024",
-            "tags": [],
+            "tags": ["JEU", "MOBILE", "NFP"],
             "access": [
                 {
                     "link": "https://foulepopulaire.fr/",
@@ -77,11 +77,11 @@
         {
             "id": "laec-est-toi",
             "title": "LAEC est TOI",
-            "description": "Reconstruis le programme à travers une série de puzzles sémantiques extrêmement chill",
+            "description": "Reconstruis le programme à travers une série de puzzles sémantiques extrêmement chill, inspiré du jeu BABA is YOU",
             "image": "/covers/laec-est-toi.png",
             "banner": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvODM2MTM4Lzg0MjA1NzAucG5n%2Foriginal%2Fbo2LRj.png&f=1&nofb=1&ipt=6cda9965878d678bf9826423d589c11875e418057151741564661dd61081bda0",
             "year": "2022",
-            "tags": [],
+            "tags": ["JEU"],
             "access": [
                 {
                     "link": "https://la-barricade.itch.io/laec-est-vous",
@@ -93,11 +93,11 @@
         {
             "id": "100-jours",
             "title": "100 jours",
-            "description": "Vivez 100 jours (ou plus ?) d'une aventure politique fantastique",
+            "description": "Vivez 100 jours (ou plus ?) d'une aventure politique fantastique (⚠️ Attention le jeu a beaucoup vieilli également)",
             "image": "/covers/100-jours.png",
             "banner": "https://100jours-nupes.fr/splashscreen_sanstexte.png",
             "year": "2022",
-            "tags": [],
+            "tags": ["JEU", "NUPES"],
             "access": [
                 {
                     "link": "https://100jours-nupes.fr/",
@@ -113,7 +113,7 @@
             "image": "/covers/derniere-station.png",
             "banner": "/derniere-station.png",
             "year": "2022",
-            "tags": [],
+            "tags": ["MUSIQUE", "SON", "MELENCHON", "JLM"],
             "access": [
                 {
                     "link": "https://www.youtube.com/watch?v=VoTads5Y5MY",
@@ -129,7 +129,7 @@
             "image": "/covers/chill-vibes.png",
             "banner": "/chill-vibes.png",
             "year": "2024",
-            "tags": [],
+            "tags": ["POUTOU", "MUSIQUE", "SON"],
             "access": [
                 {
                     "link": "https://www.youtube.com/watch?v=tFb2onSr3Gs",
@@ -145,7 +145,7 @@
             "image": "/covers/clique-bardella.png",
             "banner": "/clique-bardella.png",
             "year": "2024",
-            "tags": [],
+            "tags": ["MUSIQUE"],
             "access": [
                 {
                     "link": "https://www.youtube.com/watch?v=0CfX66xECJY",
@@ -161,7 +161,7 @@
             "image": "/covers/lucie.png",
             "banner": "/lucie.png",
             "year": "2024",
-            "tags": [],
+            "tags": ["MUSIQUE", "SON", "CASTETS"],
             "access": [
                 {
                     "link": "https://fb.watch/wgrPUEOiSl/",
@@ -177,7 +177,7 @@
             "image": "/covers/melenchon-v-zob.png",
             "banner": "/melenchon-v-zob.png",
             "year": "2021",
-            "tags": [],
+            "tags": ["JLM", "MELENCHON", "VIDEO", "ZEMMOUR"],
             "access": [
                 {
                     "link": "https://www.youtube.com/watch?v=77Tg6mZays0",

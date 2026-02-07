@@ -4,24 +4,48 @@ import Footer from './components/Footer'
 import Post from './components/Post'
 import './index.css'
 import Shelf from './components/Shelf'
-import { getContent, getContentEntry } from './utils/content'
+import { getContent, getContentEntry, searchContent } from './utils/content'
 import { FaFilm, FaGamepad, FaHeadphones } from 'react-icons/fa6'
+import About from './components/About'
 
 function App() {
   // Juste tes données de base
   const [posts, setPosts] = useState(getContent())
   const [selectedBackground, setSelectedBackground] = useState("")
   const [selectedPost, setSelectedPost] = useState(null)
+  const [aboutOpened, setAboutOpened] = useState(false)
 
   const handleEscape = (event) => {
     if (event.key === 'Escape') {
-      setSelectedPost(null);
+      console.log(selectedPost, aboutOpened)
+      if (selectedPost === null && aboutOpened === false) {
+        setPosts(getContent())
+      }
+      setSelectedPost(null)
+      setAboutOpened(false)
     }
   };
 
   useEffect(() => {
     document.addEventListener('keydown', handleEscape);
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+    };
   }, [selectedPost]);
+
+  let searchPattern = ""
+
+  async function searchTyping(e) {
+    if (e.target.value === "") {
+      setPosts(getContent())
+      return
+    }
+    searchPattern = e.target.value
+    let newContent = searchContent(e.target.value)
+    if (e.target.value === searchPattern) {
+      setPosts(newContent)
+    }
+  }
 
   return (
     // 1. Structure fixe : hauteur écran bloquée
@@ -39,25 +63,26 @@ function App() {
         <main className="flex flex-col py-18 overflow-hidden overflow-y-scroll text-blanc absolute top-0 bottom-0 right-0 left-0">
 
           {/* Liste des posts mis en avant */}
-          <Shelf posts={posts.featured} set="featured" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} emphasis />
+          {!!posts.featured.length && <Shelf posts={posts.featured} set="featured" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} emphasis />}
 
           {/* Liste des jeux */}
-          <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaGamepad /> Les Jeux</h1>
-          <Shelf posts={posts.games} set="games" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />
+          {!!posts.games.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaGamepad /> Les Jeux</h1>}
+          {!!posts.games.length && <Shelf posts={posts.games} set="games" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
 
           {/* Liste des vidéos */}
-          <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaHeadphones /> Les Sons</h1>
-          <Shelf posts={posts.music} set="videos" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />
+          {!!posts.music.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaHeadphones /> Les Sons</h1>}
+          {!!posts.music.length && <Shelf posts={posts.music} set="videos" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
 
           {/* Liste des sons */}
-          <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaFilm /> Les Montages cringe</h1>
-          <Shelf posts={posts.videos} set="videos" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />
+          {!!posts.videos.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaFilm /> Les Montages cringe</h1>}
+          {!!posts.videos.length && <Shelf posts={posts.videos} set="videos" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
         </main>
       )}
 
-      {!selectedPost && (<Header />)}
+      {!selectedPost && (<Header openAbout={() => setAboutOpened(true)} searchTyping={searchTyping} />)}
       {!selectedPost && (<Footer />)}
       <Post post={getContentEntry(selectedPost)} close={() => setSelectedPost(null)} />
+      <About open={aboutOpened} close={() => setAboutOpened(false)} />
     </div>
   )
 }

@@ -52,6 +52,10 @@ body {
     animation: glow 1s ease-in-out infinite alternate;
 }
 
+.glowbox {
+    animation: glowbox 1s ease-in-out infinite alternate;
+}
+
 @-webkit-keyframes glow {
     from {
         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ae3cc7, 0 0 20px #ae3cc7, 0 0 25px #ae3cc7, 0 0 30px #ae3cc7, 0 0 35px #ae3cc7;
@@ -59,5 +63,15 @@ body {
 
     to {
         text-shadow: 0 0 10px #fff, 0 0 15px #de4dff, 0 0 20px #de4dff, 0 0 25px #de4dff, 0 0 30px #de4dff, 0 0 35px #de4dff, 0 0 40px #de4dff;
+    }
+}
+
+@-webkit-keyframes glowbox {
+    from {
+        box-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #ae3cc7, 0 0 20px #ae3cc7, 0 0 25px #ae3cc7, 0 0 30px #ae3cc7, 0 0 35px #ae3cc7;
+    }
+
+    to {
+        box-shadow: 0 0 10px #000, 0 0 15px #de4dff, 0 0 20px #de4dff, 0 0 25px #de4dff, 0 0 30px #de4dff, 0 0 35px #de4dff, 0 0 40px #de4dff;
     }
 }
