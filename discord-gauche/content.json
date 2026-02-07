@@ -7,7 +7,11 @@
             "image": "/covers/laec.png",
             "banner": "/ScreenshotLAEC.png",
             "year": "2022",
-            "tags": ["PROGRAMME", "AVENIR", "SITE"],
+            "tags": [
+                "PROGRAMME",
+                "AVENIR",
+                "SITE"
+            ],
             "access": [
                 {
                     "link": "https://laec.fr",
@@ -23,7 +27,19 @@
             "image": "https://melenshack.fr/images/uRh1u601.jpg",
             "banner": "https://melenshack.fr/images/NpD9ZhWK.gif",
             "year": "2017",
-            "tags": ["JEU", "MELENCHON", "JLM", "RICHES", "SECOUER", "FISKAL", "FISCAL COMBAT", "AUBRY", "MANON", "JEAN LUC", "MOBILE"],
+            "tags": [
+                "JEU",
+                "MELENCHON",
+                "JLM",
+                "RICHES",
+                "SECOUER",
+                "FISKAL",
+                "FISCAL COMBAT",
+                "AUBRY",
+                "MANON",
+                "JEAN LUC",
+                "MOBILE"
+            ],
             "access": [
                 {
                     "link": "https://bobysait.com/fiscalkombat.fr/web/",
@@ -49,7 +65,13 @@
             "image": "/covers/manufacture.png",
             "banner": "https://cdn.helloasso.com/img/photos/final-9041ac8f9d9d4884b2995676c28e7477.png",
             "year": "2025",
-            "tags": ["LAMA", "TOKTOK", "OUTIL", "WEB", "SITE"],
+            "tags": [
+                "LAMA",
+                "TOKTOK",
+                "OUTIL",
+                "WEB",
+                "SITE"
+            ],
             "access": [
                 {
                     "link": "https://la-manufacture.io/",
@@ -65,7 +87,11 @@
             "image": "/covers/foule-populaire.png",
             "banner": "https://foulepopulaire.fr/_ipx/_/img/KA_desktop.png",
             "year": "2024",
-            "tags": ["JEU", "MOBILE", "NFP"],
+            "tags": [
+                "JEU",
+                "MOBILE",
+                "NFP"
+            ],
             "access": [
                 {
                     "link": "https://foulepopulaire.fr/",
@@ -81,7 +107,9 @@
             "image": "/covers/laec-est-toi.png",
             "banner": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimg.itch.zone%2FaW1hZ2UvODM2MTM4Lzg0MjA1NzAucG5n%2Foriginal%2Fbo2LRj.png&f=1&nofb=1&ipt=6cda9965878d678bf9826423d589c11875e418057151741564661dd61081bda0",
             "year": "2022",
-            "tags": ["JEU"],
+            "tags": [
+                "JEU"
+            ],
             "access": [
                 {
                     "link": "https://la-barricade.itch.io/laec-est-vous",
@@ -97,7 +125,10 @@
             "image": "/covers/100-jours.png",
             "banner": "https://100jours-nupes.fr/splashscreen_sanstexte.png",
             "year": "2022",
-            "tags": ["JEU", "NUPES"],
+            "tags": [
+                "JEU",
+                "NUPES"
+            ],
             "access": [
                 {
                     "link": "https://100jours-nupes.fr/",
@@ -113,7 +144,12 @@
             "image": "/covers/derniere-station.png",
             "banner": "/derniere-station.png",
             "year": "2022",
-            "tags": ["MUSIQUE", "SON", "MELENCHON", "JLM"],
+            "tags": [
+                "MUSIQUE",
+                "SON",
+                "MELENCHON",
+                "JLM"
+            ],
             "access": [
                 {
                     "link": "https://www.youtube.com/watch?v=VoTads5Y5MY",
@@ -129,7 +165,12 @@
             "image": "/covers/chill-vibes.png",
             "banner": "/chill-vibes.png",
             "year": "2024",
-            "tags": ["POUTOU", "MUSIQUE", "SON"],
+            "tags": [
+                "POUTOU",
+                "MUSIQUE",
+                "SON",
+                "NFP"
+            ],
             "access": [
                 {
                     "link": "https://www.youtube.com/watch?v=tFb2onSr3Gs",
@@ -145,7 +186,9 @@
             "image": "/covers/clique-bardella.png",
             "banner": "/clique-bardella.png",
             "year": "2024",
-            "tags": ["MUSIQUE"],
+            "tags": [
+                "MUSIQUE"
+            ],
             "access": [
                 {
                     "link": "https://www.youtube.com/watch?v=0CfX66xECJY",
@@ -161,7 +204,12 @@
             "image": "/covers/lucie.png",
             "banner": "/lucie.png",
             "year": "2024",
-            "tags": ["MUSIQUE", "SON", "CASTETS"],
+            "tags": [
+                "MUSIQUE",
+                "SON",
+                "CASTETS",
+                "NFP"
+            ],
             "access": [
                 {
                     "link": "https://fb.watch/wgrPUEOiSl/",
@@ -177,12 +225,37 @@
             "image": "/covers/melenchon-v-zob.png",
             "banner": "/melenchon-v-zob.png",
             "year": "2021",
-            "tags": ["JLM", "MELENCHON", "VIDEO", "ZEMMOUR"],
+            "tags": [
+                "JLM",
+                "MELENCHON",
+                "VIDEO",
+                "ZEMMOUR"
+            ],
             "access": [
                 {
                     "link": "https://www.youtube.com/watch?v=77Tg6mZays0",
                     "title": "Voir sur Youtube",
                     "icon": "play"
+                }
+            ]
+        },
+        {
+            "id": "melenshack",
+            "title": "Le MélenShack",
+            "description": "La banque d'images militantes de la Barricade",
+            "image": "/covers/melenshack.png",
+            "banner": "/melenshack.png",
+            "year": "2017",
+            "tags": [
+                "SITE",
+                "APP",
+                "GIF"
+            ],
+            "access": [
+                {
+                    "link": "https://melenshack.fr/",
+                    "title": "Visiter le site",
+                    "icon": "pointer"
                 }
             ]
         }
@@ -199,12 +272,19 @@
             "fiscal-kombat",
             "100-jours"
         ],
+        "websites": [
+            "laec-fr",
+            "melenshack",
+            "la-manufacture"
+        ],
         "music": [
             "chill-poutou-vibes",
             "derniere-station",
             "clique-a-bardella",
             "lucie-pm"
         ],
-        "videos": ["melenchon-v-zemmour"]
+        "videos": [
+            "melenchon-v-zemmour"
+        ]
     }
 }
