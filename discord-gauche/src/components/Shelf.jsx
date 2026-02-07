@@ -1,8 +1,8 @@
 export default ({ set, posts, setSelectedBackground, setSelectedPost, emphasis = false }) => (
-    <div className="flex flex-col md:flex-row md:overflow-hidden md:overflow-x-auto md:min-h-[400px] ">
+    <div className="flex flex-col md:flex-row md:overflow-hidden md:overflow-x-auto md:min-h-[450px] ">
         {posts.map((post) => (
             <div key={`${set}-${post.id}`} className={`ml-6 ${emphasis ? "first:md:min-w-[644px]" : ""} min-w-[244px] max-w-[244px] md:overflow-hidden mb-8 transition-all`}>
-                <div className="md:flex flex-col min-h-[400px]">
+                <div className="md:flex flex-col min-h-[450px]">
                     <a
                         onFocus={() => setSelectedBackground(post.id)}
                         onMouseOver={() => setSelectedBackground(post.id)}

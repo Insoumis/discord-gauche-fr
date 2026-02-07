@@ -1,4 +1,4 @@
-import { FaCircleInfo, FaArrowPointer, FaDownload, FaXmark } from "react-icons/fa6";
+import { FaCircleInfo, FaArrowPointer, FaDownload, FaXmark, FaPlay } from "react-icons/fa6";
 
 export default ({ post, close }) => (
     <div className={`absolute flex flex-col bg-noir inset-0 text-blanc transition-all duration-500 ${!post ? 'invisible opacity-0' : 'opacity-100'}`} >
@@ -33,6 +33,7 @@ export default ({ post, close }) => (
                         >
                             {btn.icon === "pointer" && <FaArrowPointer />}
                             {btn.icon === "download" && <FaDownload />}
+                            {btn.icon === "play" && <FaPlay />}
                             {btn.title}
                         </a>)
                     }

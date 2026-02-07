@@ -105,6 +105,86 @@
                     "icon": "pointer"
                 }
             ]
+        },
+        {
+            "id": "derniere-station",
+            "title": "Dernière station avant le désert",
+            "description": "Synthwave Mélenchon Core",
+            "image": "/covers/derniere-station.png",
+            "banner": "/derniere-station.png",
+            "year": "2022",
+            "tags": [],
+            "access": [
+                {
+                    "link": "https://www.youtube.com/watch?v=VoTads5Y5MY",
+                    "title": "Écouter sur Youtube",
+                    "icon": "play"
+                }
+            ]
+        },
+        {
+            "id": "chill-poutou-vibes",
+            "title": "Chill anticapitalist Poutou vibes",
+            "description": "🚩 Some custom mix to chill&study 🎧",
+            "image": "/covers/chill-vibes.png",
+            "banner": "/chill-vibes.png",
+            "year": "2024",
+            "tags": [],
+            "access": [
+                {
+                    "link": "https://www.youtube.com/watch?v=tFb2onSr3Gs",
+                    "title": "Écouter sur Youtube",
+                    "icon": "play"
+                }
+            ]
+        },
+        {
+            "id": "clique-a-bardella",
+            "title": "La Clique à Bardella",
+            "description": "Un son composé par Mune pour chier sur ses chaussures en famille",
+            "image": "/covers/clique-bardella.png",
+            "banner": "/clique-bardella.png",
+            "year": "2024",
+            "tags": [],
+            "access": [
+                {
+                    "link": "https://www.youtube.com/watch?v=0CfX66xECJY",
+                    "title": "Écouter sur Youtube",
+                    "icon": "play"
+                }
+            ]
+        },
+        {
+            "id": "lucie-pm",
+            "title": "Lucie PM",
+            "description": "Ça a très vite vieilli mais ça reste dans la tête",
+            "image": "/covers/lucie.png",
+            "banner": "/lucie.png",
+            "year": "2024",
+            "tags": [],
+            "access": [
+                {
+                    "link": "https://fb.watch/wgrPUEOiSl/",
+                    "title": "Écouter sur Facebook",
+                    "icon": "play"
+                }
+            ]
+        },
+        {
+            "id": "melenchon-v-zemmour",
+            "title": "Mélenchon VS zob",
+            "description": "De l'époque où les bots zobistes tournaient à plein régime",
+            "image": "/covers/melenchon-v-zob.png",
+            "banner": "/melenchon-v-zob.png",
+            "year": "2021",
+            "tags": [],
+            "access": [
+                {
+                    "link": "https://www.youtube.com/watch?v=77Tg6mZays0",
+                    "title": "Voir sur Youtube",
+                    "icon": "play"
+                }
+            ]
         }
     ],
     "shelves": {
@@ -118,6 +198,13 @@
             "laec-est-toi",
             "fiscal-kombat",
             "100-jours"
-        ]
+        ],
+        "music": [
+            "chill-poutou-vibes",
+            "derniere-station",
+            "clique-a-bardella",
+            "lucie-pm"
+        ],
+        "videos": ["melenchon-v-zemmour"]
     }
 }

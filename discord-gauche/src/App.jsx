@@ -5,7 +5,7 @@ import Post from './components/Post'
 import './index.css'
 import Shelf from './components/Shelf'
 import { getContent, getContentEntry } from './utils/content'
-import { FaGamepad } from 'react-icons/fa6'
+import { FaFilm, FaGamepad, FaHeadphones } from 'react-icons/fa6'
 
 function App() {
   // Juste tes données de base
@@ -44,6 +44,14 @@ function App() {
           {/* Liste des jeux */}
           <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaGamepad /> Les Jeux</h1>
           <Shelf posts={posts.games} set="games" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />
+
+          {/* Liste des vidéos */}
+          <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaHeadphones /> Les Sons</h1>
+          <Shelf posts={posts.music} set="videos" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />
+
+          {/* Liste des sons */}
+          <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaFilm /> Les Montages cringe</h1>
+          <Shelf posts={posts.videos} set="videos" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />
         </main>
       )}
 
