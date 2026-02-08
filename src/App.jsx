@@ -7,6 +7,7 @@ import Shelf from './components/Shelf'
 import { getContent, getContentEntry, searchContent } from './utils/content'
 import { FaFilm, FaGamepad, FaHeadphones, FaInternetExplorer, FaPalette } from 'react-icons/fa6'
 import About from './components/About'
+import AboutSlideShow from './components/AboutSlideShow'
 
 function App() {
   // Juste tes données de base
@@ -18,7 +19,6 @@ function App() {
 
   const handleEscape = (event) => {
     if (event.key === 'Escape') {
-      console.log(selectedPost, aboutOpened)
       if (selectedPost === null && aboutOpened === false) {
         setPosts(getContent())
       }
@@ -60,7 +60,7 @@ function App() {
       )))}
 
       {/* 2. Zone centrale : prend l'espace restant et scroll si besoin */}
-      {!selectedPost && (
+      {!selectedPost && !aboutOpened && (
         <main className="flex flex-col py-18 overflow-hidden overflow-y-scroll text-blanc absolute top-0 bottom-0 right-0 left-0">
 
           {/* Liste des posts mis en avant */}
@@ -88,9 +88,10 @@ function App() {
         </main>
       )}
 
-      {!selectedPost && (<Header openAbout={() => setAboutOpened(true)} searchTyping={searchTyping} />)}
-      {!selectedPost && (<Footer />)}
+      {!selectedPost && !aboutOpened && (<Header openAbout={() => setAboutOpened(true)} searchTyping={searchTyping} />)}
+      {!selectedPost && !aboutOpened && (<Footer />)}
       <Post post={getContentEntry(selectedPost)} close={() => setSelectedPost(null)} />
+      <AboutSlideShow open={aboutOpened} posts={posts} />
       <About open={aboutOpened} close={() => setAboutOpened(false)} />
     </div>
   )

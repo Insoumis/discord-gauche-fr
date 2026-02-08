@@ -11,15 +11,15 @@ import MastoLogo from '../assets/masto.png'
 
 export default ({ open, close }) => (
     <div className={`absolute flex flex-row max-h-full overflow-hidden bg-noir/70 inset-0 text-blanc transition-all duration-500 ${open ? 'opacity-100' : 'invisible opacity-0'}`} >
-        <div className={`w-[800px] p-[20px] h-full overflow-y-scroll bg-noir transition-all duration-500 ${open ? '' : 'ml-[-800px]'}`}>
+        <div className={`w-[800px] p-[20px] h-full overflow-y-scroll bg-noir shadow-2xl/100 transition-all duration-500 ${open ? '' : 'ml-[-800px]'}`}>
             <br />
-            <p className="w-full flex flex-row justify-center"><img src={LogoBarricade} className="w-[300px] bg-violet p-[20px] rounded-3xl glowbox" /></p>
+            <p className="w-full flex flex-row justify-center"><img src={LogoBarricade} className="w-[300px] h-[296px] bg-violet p-[20px] rounded-3xl glowbox" /></p>
             <br /><br />
             <h1 className="font-extrabold text-xl">Qui sommes-nous ?</h1><br />
             <p className="border-jaune border-l-[2px] p-[10px]">
                 La Barricade est le premier serveur Discord de Gauche FR !<br /><br />
                 Depuis 2016 et motivé·e·s par la perspective de pousser l'Avenir en Commun au pouvoir comme programme politique à vocation unitaire, les milliers de membres du serveur s'organisent et produisent des outils et des contenus numériques destinés à la vulgarisation de nos idées et au militantisme en général.<br /><br />
-                Tout en indépendance des partis, certaines productions ont eu l'occasion d'influencer les dernières campagnes, vous en trouverez une partie sur notre site ⏭️
+                En indépendance des partis, certaines productions ont eu l'occasion d'influencer les dernières campagnes, vous en trouverez une partie en parcourant le site ⏭️
             </p><br />
             <a
                 href="https://discord.gg/barricade"
