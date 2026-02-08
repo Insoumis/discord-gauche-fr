@@ -19,7 +19,8 @@ export default ({ open, close }) => (
             <p className="border-jaune border-l-[2px] p-[10px]">
                 La Barricade est le premier serveur Discord de Gauche FR !<br /><br />
                 Depuis 2016 et motivé·e·s par la perspective de pousser l'Avenir en Commun au pouvoir comme programme politique à vocation unitaire, les milliers de membres du serveur s'organisent et produisent des outils et des contenus numériques destinés à la vulgarisation de nos idées et au militantisme en général.<br /><br />
-                En indépendance des partis, certaines productions ont eu l'occasion d'influencer les dernières campagnes, vous en trouverez une partie en parcourant le site ⏭️
+                En indépendance des partis, certaines productions ont eu l'occasion d'influencer les dernières campagnes. À découvrir sur le site ⏭️<br/><br/>
+                Et pour passer à l'action :
             </p><br />
             <a
                 href="https://discord.gg/barricade"
@@ -48,15 +49,15 @@ export default ({ open, close }) => (
                     <img src={TwitchLogo} alt="Twitch Logo" className="w-6 h-6 invert" />
                 </a>
 
-                {/* Twitter */}
+                {/* Bluesky*/}
                 <a
-                    href="https://x.com/DiscordGauche"
+                    href="https://bsky.app/profile/discordgauche.bsky.social "
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Twitter"
+                    aria-label="Facebook"
                     className="text-white hover:opacity-75 transition duration-150"
                 >
-                    <img src={TwitterLogo} alt="Twitter Logo" className="w-6 h-6 invert" />
+                    <img src={BskyLogo} alt="Bluesky Logo" className="w-6 h-6 invert" />
                 </a>
 
                 {/* Mastodon */}
@@ -70,16 +71,6 @@ export default ({ open, close }) => (
                     <img src={MastoLogo} alt="Mastodon Logo" className="w-6 h-6 invert" />
                 </a>
 
-                {/* Bluesky*/}
-                <a
-                    href="https://bsky.app/profile/discordgauche.bsky.social "
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="text-white hover:opacity-75 transition duration-150"
-                >
-                    <img src={BskyLogo} alt="Bluesky Logo" className="w-6 h-6 invert" />
-                </a>
                 {/* Facebook */}
                 <a
                     href="https://www.facebook.com/discordgauche"
@@ -100,6 +91,17 @@ export default ({ open, close }) => (
                     className="text-white hover:opacity-75 transition duration-150"
                 >
                     <img src={InstagramLogo} alt="Instagram Logo" className="w-6 h-6 invert" />
+                </a>
+
+                {/* Twitter */}
+                <a
+                    href="https://x.com/DiscordGauche"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Twitter"
+                    className="text-white hover:opacity-75 transition duration-150"
+                >
+                    <img src={TwitterLogo} alt="Twitter Logo" className="w-6 h-6 invert" />
                 </a>
 
                 {/* TikTok */}

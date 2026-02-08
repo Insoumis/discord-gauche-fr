@@ -37,15 +37,15 @@ export default function Header() {
                     <img src={TwitchLogo} alt="Twitch Logo" className="w-6 h-6 invert" />
                 </a>
 
-                {/* Twitter */}
+                {/* Bluesky*/}
                 <a
-                    href="https://x.com/DiscordGauche"
+                    href="https://bsky.app/profile/discordgauche.bsky.social "
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Twitter"
+                    aria-label="Facebook"
                     className="text-white hover:opacity-75 transition duration-150"
                 >
-                    <img src={TwitterLogo} alt="Twitter Logo" className="w-6 h-6 invert" />
+                    <img src={BskyLogo} alt="Bluesky Logo" className="w-6 h-6 invert" />
                 </a>
 
                 {/* Mastodon */}
@@ -59,16 +59,6 @@ export default function Header() {
                     <img src={MastoLogo} alt="Mastodon Logo" className="w-6 h-6 invert" />
                 </a>
 
-                {/* Bluesky*/}
-                <a
-                    href="https://bsky.app/profile/discordgauche.bsky.social "
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Facebook"
-                    className="text-white hover:opacity-75 transition duration-150"
-                >
-                    <img src={BskyLogo} alt="Bluesky Logo" className="w-6 h-6 invert" />
-                </a>
                 {/* Facebook */}
                 <a
                     href="https://www.facebook.com/discordgauche"
@@ -89,6 +79,17 @@ export default function Header() {
                     className="text-white hover:opacity-75 transition duration-150"
                 >
                     <img src={InstagramLogo} alt="Instagram Logo" className="w-6 h-6 invert" />
+                </a>
+
+                {/* Twitter */}
+                <a
+                    href="https://x.com/DiscordGauche"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Twitter"
+                    className="text-white hover:opacity-75 transition duration-150"
+                >
+                    <img src={TwitterLogo} alt="Twitter Logo" className="w-6 h-6 invert" />
                 </a>
 
                 {/* TikTok */}

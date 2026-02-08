@@ -327,6 +327,26 @@
                     "icon": "pointer"
                 }
             ]
+        },
+        {
+            "id": "toktok",
+            "title": "TokTok",
+            "description": "L'application de suivi de porte-à-porte, intégrée à Action Populaire !",
+            "image": "/covers/toktok.png",
+            "banner": "/toktok.png",
+            "year": "2022",
+            "tags": [
+                "TERRAIN",
+                "MILITANTISME",
+                "APPLICATION"
+            ],
+            "access": [
+                {
+                    "link": "https://actionpopulaire.fr/",
+                    "title": "Ouvrir Action Populaire",
+                    "icon": "pointer"
+                }
+            ]
         }
     ],
     "shelves": {
@@ -344,7 +364,8 @@
         "websites": [
             "laec-fr",
             "melenshack",
-            "la-manufacture"
+            "la-manufacture",
+            "toktok"
         ],
         "music": [
             "chill-poutou-vibes",
