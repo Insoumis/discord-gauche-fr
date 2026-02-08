@@ -15,7 +15,7 @@ export default ({ open, close }) => (
             <br />
             <p className="w-full flex flex-row justify-center"><img src={LogoBarricade} className="w-[300px] h-[296px] bg-violet p-[20px] rounded-3xl glowbox" /></p>
             <br /><br />
-            <h1 className="font-extrabold text-xl">Qui sommes-nous ?</h1><br />
+            <h1 className="font-extrabold text-xl">N'attendez pas les consignes</h1><br />
             <p className="border-jaune border-l-[2px] p-[10px]">
                 La Barricade est le premier serveur Discord de Gauche FR !<br /><br />
                 Depuis 2016 et motivé·e·s par la perspective de pousser l'Avenir en Commun au pouvoir comme programme politique à vocation unitaire, les milliers de membres du serveur s'organisent et produisent des outils et des contenus numériques destinés à la vulgarisation de nos idées et au militantisme en général.<br /><br />
