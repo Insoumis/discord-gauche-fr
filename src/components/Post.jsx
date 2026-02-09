@@ -20,7 +20,7 @@ export default ({ post, close }) => (
         {post && (
             <div className="flex-1 p-[20px]">
                 <div className="p-[20px] bg-blanc/30 flex flex-row items-center gap-[20px] text-lg">
-                    <FaCircleInfo className="" />
+                    <FaCircleInfo className="min-w-[20px]" />
                     {post.description}
                 </div>
                 <div className="flex flex-row flex-wrap mt-[20px] gap-[20px]">
