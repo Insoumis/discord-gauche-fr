@@ -19,7 +19,7 @@ export default function Header({ openAbout, searchTyping }) {
     const time = today.toLocaleTimeString("fr-FR", { hour12: false });
 
     return (
-        <header className="text-white h-[60px] flex absolute w-full">
+        <header className="text-white h-[60px] flex absolute w-full z-1">
             <nav className="mx-auto flex-1 flex flex-wrap justify-between items-center">
                 {/* Bloc de navigation gauche (Logo + Réseaux Sociaux) */}
                 <span className="w-[10px]" />

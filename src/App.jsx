@@ -5,9 +5,10 @@ import Post from './components/Post'
 import './index.css'
 import Shelf from './components/Shelf'
 import { getContent, getContentEntry, searchContent } from './utils/content'
-import { FaFilm, FaGamepad, FaHeadphones, FaInternetExplorer, FaPalette } from 'react-icons/fa6'
+import { FaChevronDown, FaChevronUp, FaFilm, FaGamepad, FaHeadphones, FaInternetExplorer, FaPalette, FaStar } from 'react-icons/fa6'
 import About from './components/About'
 import AboutSlideShow from './components/AboutSlideShow'
+import Legal from './components/Legal'
 
 function App() {
   // Juste tes données de base
@@ -15,15 +16,21 @@ function App() {
   const [selectedBackground, setSelectedBackground] = useState("")
   const [selectedPost, setSelectedPost] = useState(null)
   const [aboutOpened, setAboutOpened] = useState(!localStorage.getItem("dejavu"))
+  const [legalOpened, setLegalOpened] = useState(false)
   localStorage.setItem("dejavu", true)
 
   const handleEscape = (event) => {
     if (event.key === 'Escape') {
-      if (selectedPost === null && aboutOpened === false) {
+      if (selectedPost === null && aboutOpened === false && legalOpened === false) {
         setPosts(getContent())
       }
-      setSelectedPost(null)
-      setAboutOpened(false)
+      if (legalOpened) {
+        setLegalOpened(false)
+      }
+      else {
+        setSelectedPost(null)
+        setAboutOpened(false)
+      }
     }
   };
 
@@ -32,7 +39,7 @@ function App() {
     return () => {
       document.removeEventListener('keydown', handleEscape);
     };
-  }, [selectedPost]);
+  }, [selectedPost, aboutOpened, legalOpened]);
 
   let searchPattern = ""
 
@@ -51,48 +58,66 @@ function App() {
   return (
     // 1. Structure fixe : hauteur écran bloquée
     <div className="h-screen flex flex-col bg-noir text-gray-800 overflow-hidden font-[Grotesk]">
+
+      {/* 2. Zone centrale : prend l'espace restant et scroll si besoin */}
+      {!selectedPost && !aboutOpened && !legalOpened && (
+        <main className="flex flex-col py-18 pb-60 overflow-hidden overflow-y-scroll text-blanc z-1 scroll-smooth">
+          <h1 id="top" className="scroll-mt-[60px]"></h1>
+
+          {/* Liste des posts mis en avant */}
+          {!!posts.featured.length && <h1 id="featured" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
+            <FaStar /> Les Trucs Connus Là<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Suivant" href="#games"><FaChevronDown /></a>
+          </h1>}
+          {!!posts.featured.length && <Shelf posts={posts.featured} set="featured" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} emphasis />}
+
+          {/* Liste des jeux */}
+          {!!posts.games.length && <h1 id="games" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
+            <FaGamepad /> Les Jeux<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Suivant" href="#websites"><FaChevronDown /></a>
+          </h1>}
+          {!!posts.games.length && <Shelf posts={posts.games} set="games" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
+
+          {/* Liste des sites */}
+          {!!posts.websites.length && <h1 id="websites" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
+            <FaInternetExplorer /> Les Sites/Outils Web<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Suivant" href="#music"><FaChevronDown /></a>
+          </h1>}
+          {!!posts.websites.length && <Shelf posts={posts.websites} set="websites" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
+
+          {/* Liste des sons */}
+          {!!posts.music.length && <h1 id="music" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
+            <FaHeadphones /> Les Sons<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Suivant" href="#images"><FaChevronDown /></a>
+          </h1>}
+          {!!posts.music.length && <Shelf posts={posts.music} set="music" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
+
+          {/* Liste des visuels */}
+          {!!posts.images.length && <h1 id="images" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
+            <FaPalette /> Les Visuels<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Suivant" href="#videos"><FaChevronDown /></a>
+          </h1>}
+          {!!posts.images.length && <Shelf posts={posts.images} set="images" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
+
+          {/* Liste des vidéos */}
+          {!!posts.videos.length && <h1 id="videos" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
+            <FaFilm /> Les Montages<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Retour en haut" href="#top"><FaChevronUp /></a>
+          </h1>}
+          {!!posts.videos.length && <Shelf posts={posts.videos} set="videos" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
+
+        </main>
+      )}
+
+      {!selectedPost && !aboutOpened && (<Footer openAbout={() => setAboutOpened(true)} openLegal={() => setLegalOpened(true)} />)}
+      {!selectedPost && !aboutOpened && (<Header openAbout={() => setAboutOpened(true)} searchTyping={searchTyping} />)}
+
       {Object.keys(posts).map(set => posts[set].map((post) => (
         <div
           key={`banner-${post.id}`}
-          className="absolute w-full h-[700px] bg-center bg-cover mask-b-from-10% mask-b-to-80% opacity-30 transition-all duration-500"
+          className="absolute w-full h-[700px] bg-center bg-cover mask-b-from-10% mask-b-to-80% opacity-30 transition-all duration-1000"
           style={{ backgroundImage: `url(${post.banner})`, opacity: selectedBackground === post.id ? "30%" : "0%" }}
         />
       )))}
 
-      {/* 2. Zone centrale : prend l'espace restant et scroll si besoin */}
-      {!selectedPost && !aboutOpened && (
-        <main className="flex flex-col py-18 overflow-hidden overflow-y-scroll text-blanc absolute top-0 bottom-0 right-0 left-0">
-
-          {/* Liste des posts mis en avant */}
-          {!!posts.featured.length && <Shelf posts={posts.featured} set="featured" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} emphasis />}
-
-          {/* Liste des jeux */}
-          {!!posts.games.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaGamepad /> Les Jeux</h1>}
-          {!!posts.games.length && <Shelf posts={posts.games} set="games" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
-
-          {/* Liste des sites */}
-          {!!posts.websites.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaInternetExplorer /> Les Sites/Outils Web</h1>}
-          {!!posts.websites.length && <Shelf posts={posts.websites} set="websites" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
-
-          {/* Liste des sons */}
-          {!!posts.music.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaHeadphones /> Les Sons</h1>}
-          {!!posts.music.length && <Shelf posts={posts.music} set="music" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
-
-          {/* Liste des visuels */}
-          {!!posts.images.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaPalette /> Les Visuels</h1>}
-          {!!posts.images.length && <Shelf posts={posts.images} set="images" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
-
-          {/* Liste des vidéos */}
-          {!!posts.videos.length && <h1 className="ml-6 mb-2 text-2xl font-extrabold flex flex-row items-center"><FaFilm /> Les Montages</h1>}
-          {!!posts.videos.length && <Shelf posts={posts.videos} set="videos" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
-        </main>
-      )}
-
-      {!selectedPost && !aboutOpened && (<Header openAbout={() => setAboutOpened(true)} searchTyping={searchTyping} />)}
-      {!selectedPost && !aboutOpened && (<Footer />)}
       <Post post={getContentEntry(selectedPost)} close={() => setSelectedPost(null)} />
-      <AboutSlideShow open={aboutOpened} posts={posts} />
-      <About open={aboutOpened} close={() => setAboutOpened(false)} />
+      <AboutSlideShow open={aboutOpened || legalOpened} posts={posts} />
+      <About open={aboutOpened} close={() => setAboutOpened(false)} openLegal={() => setLegalOpened(true)} />
+      <Legal open={legalOpened} close={() => setLegalOpened(false)} />
     </div>
   )
 }

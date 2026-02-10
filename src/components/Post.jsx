@@ -1,7 +1,7 @@
 import { FaCircleInfo, FaArrowPointer, FaDownload, FaXmark, FaPlay } from "react-icons/fa6";
 
 export default ({ post, close }) => (
-    <div className={`absolute flex flex-col bg-noir inset-0 text-blanc transition-all duration-500 ${!post ? 'invisible opacity-0' : 'opacity-100'}`} >
+    <div className={`z-1 absolute flex flex-col bg-noir inset-0 text-blanc transition-all duration-500 ${!post ? 'invisible opacity-0' : 'opacity-100'}`} >
         {post && (
             <div
                 className="absolute w-full l-0 t-0 r-0 h-[200px] md:h-[300px] bg-center bg-cover z-0"

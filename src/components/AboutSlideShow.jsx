@@ -17,7 +17,7 @@ export default function ({ open, posts }) {
     }, []);
 
     return (
-        <div className={`absolute flex flex-row max-h-full overflow-hidden inset-0 transition-all duration-500 ${open ? 'opacity-100' : 'invisible opacity-0'}`} >
+        <div className={`z-1 absolute flex flex-row max-h-full overflow-hidden inset-0 transition-all duration-500 ${open ? 'opacity-100' : 'invisible opacity-0'}`} >
             {CONTENT.entries.map((post) => (
                 <div
                     key={`banner-${post.id}`}

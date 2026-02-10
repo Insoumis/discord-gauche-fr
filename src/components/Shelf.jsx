@@ -9,16 +9,16 @@ export default ({ set, posts, setSelectedBackground, setSelectedPost, emphasis =
                         onClick={() => setSelectedPost(post.id)}
                         href="#"
                         alt={post.title}
-                        className="imageAnchor outline-none p-[2px] border-2 border-transparent focus:border-blanc transition-all duration-500 md:text-transparent focus:border-blanc focus:transform-[matrix(0.8,0.05,0,0.8,1,0)] focus:text-blanc hover:border-blanc hover:transform-[matrix(0.8,0.05,0,0.8,1,0)] hover:text-blanc"
+                        className="imageAnchor max-h-[368px] outline-none p-[2px] border-2 border-transparent focus:border-blanc transition-all duration-500 md:text-transparent focus:border-blanc focus:transform-[matrix(0.8,0.05,0,0.8,1,0)] focus:text-blanc hover:border-blanc hover:transform-[matrix(0.8,0.05,0,0.8,1,0)] hover:text-blanc"
                     >
                         <img
                             className="w-full min-h-[360px] max-h-[360px] object-cover"
                             src={post.image}
                             alt={post.title}
                         />
-                        <b className="absolute text-2xl font-[Mohave] tracking-wide  uppercase m-2">
+                        <div className="text-2xl font-[Mohave] tracking-wide uppercase mt-2 font-bold">
                             {post.title}
-                        </b>
+                        </div>
                     </a>
                 </div>
             </div>
