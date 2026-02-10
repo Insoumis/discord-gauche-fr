@@ -12,7 +12,7 @@ import MastoLogo from '../assets/masto.png'
 import { FaDiscord } from 'react-icons/fa6';
 
 export default ({ openAbout, openLegal }) => (
-    <header className="bg-violet text-white p-4 shadow-md flex items-center w-full">
+    <div className="z-1 bg-violet text-white p-4 shadow-md flex items-center fixed bottom-0 w-full">
 
         {/* TEMPLATE POUR LES RÉSEAUX SOCIAUX (Desktop) */}
         <div className="hidden sm:flex items-center space-x-3">
@@ -130,7 +130,5 @@ export default ({ openAbout, openLegal }) => (
             <FaDiscord className="w-6 h-6" />
             Rejoins le collectif !
         </a>
-
-
-    </header>
+    </div>
 )

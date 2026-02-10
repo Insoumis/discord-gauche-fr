@@ -57,16 +57,14 @@ function App() {
 
   return (
     // 1. Structure fixe : hauteur écran bloquée
-    <div className="h-screen flex flex-col bg-noir text-gray-800 overflow-hidden font-[Grotesk]">
-
-      {/* 2. Zone centrale : prend l'espace restant et scroll si besoin */}
+    <div className="absolute inset-0 flex flex-col bg-noir text-gray-800 font-[Grotesk]">
       {!selectedPost && !aboutOpened && !legalOpened && (
-        <main className="flex flex-col py-18 pb-60 overflow-hidden overflow-y-scroll text-blanc z-1 scroll-smooth">
+        <div className="flex-1 flex flex-col py-18 pb-80 overflow-hidden overflow-y-scroll text-blanc z-1 scroll-smooth">
           <h1 id="top" className="scroll-mt-[60px]"></h1>
 
           {/* Liste des posts mis en avant */}
           {!!posts.featured.length && <h1 id="featured" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
-            <FaStar /> Les Trucs Connus Là<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Suivant" href="#games"><FaChevronDown /></a>
+            <FaStar /> Les Incontournables<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Suivant" href="#games"><FaChevronDown /></a>
           </h1>}
           {!!posts.featured.length && <Shelf posts={posts.featured} set="featured" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} emphasis />}
 
@@ -100,7 +98,7 @@ function App() {
           </h1>}
           {!!posts.videos.length && <Shelf posts={posts.videos} set="videos" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
 
-        </main>
+        </div>
       )}
 
       {!selectedPost && !aboutOpened && (<Footer openAbout={() => setAboutOpened(true)} openLegal={() => setLegalOpened(true)} />)}
