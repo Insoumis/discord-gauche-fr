@@ -66,7 +66,7 @@
         {
             "id": "la-manufacture",
             "title": "La Manufacture",
-            "description": "L'association qui construit des outils militants",
+            "description": "L'association barricadienne qui construit des outils militants 🦙",
             "image": "/covers/manufacture.png",
             "banner": "https://cdn.helloasso.com/img/photos/final-9041ac8f9d9d4884b2995676c28e7477.png",
             "year": "2025",
@@ -166,7 +166,7 @@
         {
             "id": "chill-poutou-vibes",
             "title": "Chill anticapitalist Poutou vibes",
-            "description": "🚩 Some custom mix to chill&study 🎧",
+            "description": "🚩 Some custom mix to chill&study 📖",
             "image": "/covers/chill-vibes.png",
             "banner": "/chill-vibes.png",
             "year": "2024",
@@ -187,7 +187,7 @@
         {
             "id": "clique-a-bardella",
             "title": "La Clique à Bardella",
-            "description": "Un son composé par Mune pour chier sur ses chaussures en famille",
+            "description": "Un son composé par Mune pour chier sur ses chaussures en famille !",
             "image": "/covers/clique-bardella.png",
             "banner": "/clique-bardella.png",
             "year": "2024",
@@ -353,7 +353,7 @@
         "featured": [
             "laec-fr",
             "fiscal-kombat",
-            "la-manufacture"
+            "toktok"
         ],
         "games": [
             "foule-populaire",
@@ -364,8 +364,8 @@
         "websites": [
             "laec-fr",
             "melenshack",
-            "la-manufacture",
-            "toktok"
+            "toktok",
+            "la-manufacture"
         ],
         "music": [
             "chill-poutou-vibes",
