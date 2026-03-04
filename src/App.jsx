@@ -63,38 +63,38 @@ function App() {
           <h1 id="top" className="scroll-mt-[60px]"></h1>
 
           {/* Liste des posts mis en avant */}
-          {!!posts.featured.length && <h1 id="featured" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
-            <FaStar /> Les Incontournables<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Suivant" href="#games"><FaChevronDown /></a>
+          {!!posts.featured.length && <h1 id="featured" className="scroll-mt-[75px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center top-0 rounded-full">
+            <FaStar /> Les Incontournables<hr className="flex-1 mx-3" /><a aria-label="Suivant" href="#games"><FaChevronDown /></a>
           </h1>}
           {!!posts.featured.length && <Shelf posts={posts.featured} set="featured" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} emphasis />}
 
           {/* Liste des jeux */}
-          {!!posts.games.length && <h1 id="games" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
-            <FaGamepad /> Les Jeux<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Suivant" href="#websites"><FaChevronDown /></a>
+          {!!posts.games.length && <h1 id="games" className="scroll-mt-[75px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center top-0 rounded-full">
+            <FaGamepad /> Les Jeux<hr className="flex-1 mx-3" /><a aria-label="Suivant" href="#websites"><FaChevronDown /></a>
           </h1>}
           {!!posts.games.length && <Shelf posts={posts.games} set="games" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
 
           {/* Liste des sites */}
-          {!!posts.websites.length && <h1 id="websites" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
-            <FaInternetExplorer /> Les Sites/Outils Web<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Suivant" href="#music"><FaChevronDown /></a>
+          {!!posts.websites.length && <h1 id="websites" className="scroll-mt-[75px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center top-0 rounded-full">
+            <FaInternetExplorer /> Les Sites/Outils Web<hr className="flex-1 mx-3" /><a aria-label="Suivant" href="#music"><FaChevronDown /></a>
           </h1>}
           {!!posts.websites.length && <Shelf posts={posts.websites} set="websites" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
 
           {/* Liste des sons */}
-          {!!posts.music.length && <h1 id="music" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
-            <FaHeadphones /> Les Sons<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Suivant" href="#images"><FaChevronDown /></a>
+          {!!posts.music.length && <h1 id="music" className="scroll-mt-[75px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center top-0 rounded-full">
+            <FaHeadphones /> Les Sons<hr className="flex-1 mx-3" /><a aria-label="Suivant" href="#images"><FaChevronDown /></a>
           </h1>}
           {!!posts.music.length && <Shelf posts={posts.music} set="music" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
 
           {/* Liste des visuels */}
-          {!!posts.images.length && <h1 id="images" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
-            <FaPalette /> Les Visuels<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Suivant" href="#videos"><FaChevronDown /></a>
+          {!!posts.images.length && <h1 id="images" className="scroll-mt-[75px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center top-0 rounded-full">
+            <FaPalette /> Les Visuels<hr className="flex-1 mx-3" /><a aria-label="Suivant" href="#videos"><FaChevronDown /></a>
           </h1>}
           {!!posts.images.length && <Shelf posts={posts.images} set="images" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
 
           {/* Liste des vidéos */}
-          {!!posts.videos.length && <h1 id="videos" className="scroll-mt-[60px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center sticky top-0 bg-violet px-4 rounded-full md:relative md:bg-transparent md:px-0">
-            <FaFilm /> Les Montages<hr className="flex-1 mx-3 invisible md:visible" /><a aria-label="Retour en haut" href="#top"><FaChevronUp /></a>
+          {!!posts.videos.length && <h1 id="videos" className="scroll-mt-[75px] mx-6 mb-2 text-2xl font-extrabold flex flex-row items-center top-0 rounded-full">
+            <FaFilm /> Les Montages<hr className="flex-1 mx-3" /><a aria-label="Retour en haut" href="#top"><FaChevronUp /></a>
           </h1>}
           {!!posts.videos.length && <Shelf posts={posts.videos} set="videos" setSelectedBackground={setSelectedBackground} setSelectedPost={setSelectedPost} />}
 

@@ -115,7 +115,7 @@ export default ({ openAbout, openLegal }) => (
             </a>
         </div>
         <a className="ml-auto border-r-[1px] pr-2 mr-2" href="#" aria-label="À propos" onClick={openAbout}>
-            À propos
+            À propos
         </a>
         <a className=" border-r-[1px] pr-2 mr-2" href="#" aria-label="Mentions légales" onClick={openLegal}>
             Légal
@@ -124,11 +124,11 @@ export default ({ openAbout, openLegal }) => (
             href="https://discord.gg/barricade"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-rouge hover:bg-rouge/50 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
+            className="bg-rouge hover:bg-rouge/50 text-white text-center font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3"
         >
             {/* Logo Discord SVG */}
             <FaDiscord className="w-6 h-6" />
-            Rejoins le collectif !
+            Rejoins le collectif !
         </a>
     </div>
 )
