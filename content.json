@@ -1,0 +1,353 @@
+{
+    "entries": [
+        {
+            "id": "laec-fr",
+            "title": "LAEC.FR",
+            "description": "Le site du programme : l'Avenir en Commun",
+            "year": "2022",
+            "tags": [
+                "PROGRAMME",
+                "AVENIR",
+                "SITE"
+            ],
+            "access": [
+                {
+                    "link": "https://laec.fr",
+                    "title": "Consulter",
+                    "icon": "pointer"
+                },
+                {
+                    "link": "https://bd.laec.fr/",
+                    "title": "Accéder à la version bande dessinée",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "fiscal-kombat",
+            "title": "Fiscal Kombat",
+            "description": "Secouez les milliardaires !",
+            "year": "2017",
+            "tags": [
+                "JEU",
+                "MELENCHON",
+                "JLM",
+                "RICHES",
+                "SECOUER",
+                "FISKAL",
+                "FISCAL COMBAT",
+                "AUBRY",
+                "MANON",
+                "JEAN LUC",
+                "MOBILE"
+            ],
+            "access": [
+                {
+                    "link": "https://bobysait.com/fiscalkombat.fr/web/",
+                    "title": "Jouer à la version 2017 (via bobysait.com)",
+                    "icon": "pointer"
+                },
+                {
+                    "link": "https://web.archive.org/web/20201230162752/http://fiscalkombat.eu/",
+                    "title": "Jouer à la version 2019 (via archive.org)",
+                    "icon": "pointer"
+                },
+                {
+                    "link": "/resources/Fiscal+Kombat+European+Edition_1.02_apkcombo.com.apk",
+                    "title": "Télécharger la version mobile 2019 (.apk Android)",
+                    "icon": "download"
+                }
+            ]
+        },
+        {
+            "id": "la-manufacture",
+            "title": "La Manufacture",
+            "description": "L'association barricadienne qui construit des outils militants 🦙",
+            "year": "2025",
+            "tags": [
+                "LAMA",
+                "TOKTOK",
+                "OUTIL",
+                "WEB",
+                "SITE"
+            ],
+            "access": [
+                {
+                    "link": "https://la-manufacture.io/",
+                    "title": "Découvrir",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "foule-populaire",
+            "title": "Foule Populaire",
+            "description": "Le Jeu de la campagne du Nouveau Front Populaire : vaincre par les urnes !",
+            "year": "2024",
+            "tags": [
+                "JEU",
+                "MOBILE",
+                "NFP"
+            ],
+            "access": [
+                {
+                    "link": "https://foulepopulaire.fr/",
+                    "title": "Jouer !",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "laec-est-toi",
+            "title": "LAEC est TOI",
+            "description": "Reconstruis le programme à travers une série de puzzles sémantiques extrêmement chill, inspiré du jeu BABA is YOU",
+            "year": "2022",
+            "tags": [
+                "JEU"
+            ],
+            "access": [
+                {
+                    "link": "https://la-barricade.itch.io/laec-est-vous",
+                    "title": "Jouer ! (via itch.io)",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "100-jours",
+            "title": "100 jours",
+            "description": "Vivez 100 jours (ou plus ?) d'une aventure politique fantastique \n𓏸𓈒✿𓂃⚠️ La Barricade considère problématiques aujourd'hui certains des personnages représentae. N'idolâtrez jamais personne uwu 𓂃✿𓈒𓏸",
+            "year": "2022",
+            "tags": [
+                "JEU",
+                "NUPES"
+            ],
+            "access": [
+                {
+                    "link": "https://100jours-nupes.fr/",
+                    "title": "Jouer !",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "derniere-station",
+            "title": "Dernière station avant le désert",
+            "description": "Synthwave Mélenchon Core",
+            "year": "2022",
+            "tags": [
+                "MUSIQUE",
+                "SON",
+                "MELENCHON",
+                "JLM"
+            ],
+            "access": [
+                {
+                    "link": "https://www.youtube.com/watch?v=VoTads5Y5MY",
+                    "title": "Écouter sur Youtube",
+                    "icon": "play"
+                }
+            ]
+        },
+        {
+            "id": "chill-poutou-vibes",
+            "title": "Chill anticapitalist Poutou vibes",
+            "description": "🚩 A custom mix to chill&study 📖",
+            "year": "2024",
+            "tags": [
+                "POUTOU",
+                "MUSIQUE",
+                "SON",
+                "NFP"
+            ],
+            "access": [
+                {
+                    "link": "https://www.youtube.com/watch?v=tFb2onSr3Gs",
+                    "title": "Écouter sur Youtube",
+                    "icon": "play"
+                }
+            ]
+        },
+        {
+            "id": "clique-a-bardella",
+            "title": "La Clique à Bardella",
+            "description": "Un son composé par Mune pour chier sur ses chaussures en famille",
+            "year": "2024",
+            "tags": [
+                "MUSIQUE"
+            ],
+            "access": [
+                {
+                    "link": "https://www.youtube.com/watch?v=0CfX66xECJY",
+                    "title": "Écouter sur Youtube",
+                    "icon": "play"
+                }
+            ]
+        },
+        {
+            "id": "lucie-pm",
+            "title": "Lucie PM",
+            "description": "Ça reste dans la tête attention",
+            "year": "2024",
+            "tags": [
+                "MUSIQUE",
+                "SON",
+                "CASTETS",
+                "NFP"
+            ],
+            "access": [
+                {
+                    "link": "https://fb.watch/wgrPUEOiSl/",
+                    "title": "Écouter sur Facebook",
+                    "icon": "play"
+                }
+            ]
+        },
+        {
+            "id": "melenchon-v-zemmour",
+            "title": "Mélenchon VS zob",
+            "description": "De l'époque où les bots zobistes tournaient à plein régime",
+            "year": "2021",
+            "tags": [
+                "JLM",
+                "MELENCHON",
+                "VIDEO",
+                "ZEMMOUR"
+            ],
+            "access": [
+                {
+                    "link": "https://www.youtube.com/watch?v=77Tg6mZays0",
+                    "title": "Voir sur Youtube",
+                    "icon": "play"
+                }
+            ]
+        },
+        {
+            "id": "melenshack",
+            "title": "Le MélenShack",
+            "description": "La banque d'images militantes de la Barricade",
+            "year": "2017",
+            "tags": [
+                "SITE",
+                "APP",
+                "GIF"
+            ],
+            "access": [
+                {
+                    "link": "https://melenshack.fr/",
+                    "title": "Visiter le site",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "rassemblement-nepotiste",
+            "title": "Rassemblement Népostiste",
+            "description": "Une cartographie du RN et de son héritage fasciste",
+            "year": "2024",
+            "tags": [
+                "VISUEL",
+                "RN",
+                "CARTE",
+                "LE PEN"
+            ],
+            "access": [
+                {
+                    "link": "/resources/rassemblement-nepotiste.jpeg",
+                    "title": "Consulter",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "gaza-famine",
+            "title": "Gaza : La Famine est déclarée",
+            "description": "L'épisode de famine qui touche Gaza est un aspect à retardement, autant tragique que fondamental du génocide à l'oeuvre en Palestine 🇵🇸",
+            "year": "2025",
+            "tags": [
+                "VISUEL",
+                "GAZA",
+                "PALESTINE"
+            ],
+            "access": [
+                {
+                    "link": "https://bsky.app/profile/discordgauche.bsky.social/post/3lxkmwh53522m",
+                    "title": "Consulter sur Bluesky",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "chiffrage-nfp",
+            "title": "NFP : le chiffrage du programme",
+            "description": "Une version animée qui détaille le chiffrage du programme du Nouveau Front Populaire",
+            "year": "2025",
+            "tags": [
+                "ANIMATION"
+            ],
+            "access": [
+                {
+                    "link": "/resources/chiffrage_nfp.mp4",
+                    "title": "Visionner",
+                    "icon": "play"
+                },
+                {
+                    "link": "https://x.com/DiscordGauche/status/1808215270286414122/video/1",
+                    "title": "Voir sur X",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "toktok",
+            "title": "TokTok",
+            "description": "L'application de suivi de porte-à-porte, intégrée à Action Populaire",
+            "year": "2022",
+            "tags": [
+                "TERRAIN",
+                "MILITANTISME",
+                "APPLICATION"
+            ],
+            "access": [
+                {
+                    "link": "https://actionpopulaire.fr/",
+                    "title": "Ouvrir Action Populaire",
+                    "icon": "pointer"
+                }
+            ]
+        }
+    ],
+    "shelves": {
+        "featured": [
+            "laec-fr",
+            "fiscal-kombat",
+            "toktok"
+        ],
+        "games": [
+            "foule-populaire",
+            "laec-est-toi",
+            "fiscal-kombat",
+            "100-jours"
+        ],
+        "websites": [
+            "laec-fr",
+            "melenshack",
+            "toktok",
+            "la-manufacture"
+        ],
+        "music": [
+            "chill-poutou-vibes",
+            "derniere-station",
+            "clique-a-bardella",
+            "lucie-pm"
+        ],
+        "videos": [
+            "melenchon-v-zemmour"
+        ],
+        "images": [
+            "rassemblement-nepotiste",
+            "gaza-famine",
+            "chiffrage-nfp"
+        ]
+    }
+}

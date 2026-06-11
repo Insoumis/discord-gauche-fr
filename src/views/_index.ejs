@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('components/headdefault')%>
+        <link rel="stylesheet" crossorigin="" href="/components.css">
+        <script type="module" crossorigin="" src="/index.js"></script>
+        <style>
+            body {
+                margin: 0;
+                position: absolute;
+                inset: 0;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--color-noir);
+                color: lightgrey;
+                font-family: Grotesk;
+            }
+
+            #menus {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                padding-block: 5rem;
+                padding-bottom: 20rem;
+                overflow: hidden;
+                overflow-y: scroll;
+                color: var(--color-blanc);
+                z-index: 1;
+                scroll-behavior: smooth;
+            }
+
+            .category {
+                scroll-margin-top: 75px;
+                margin-inline: 1.5rem;
+                margin-bottom: 0.5rem;
+                font-weight: bolder;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                top: 0;
+                vertical-align: baseline;
+            }
+
+            .category>hr {
+                flex: 1;
+                margin-inline: 0.75rem;
+            }
+
+            h1 {
+                font-size: x-large;
+            }
+        </style>
+</head>
+
+<body>
+    <div id="menus">
+        <h1 id="top" style="scroll-margin-top: 60px;"></h1>
+
+        <h1 id="featured" class="category">
+            <img src="/assets/icons/star.svg" class="icon-img" /> Les Incontournables
+            <hr /><a aria-label="Lien rapide vers les jeux" href="#games">
+                <img src="/assets/icons/chevrondown.svg" class="icon-img" />
+            </a>
+        </h1>
+        <%- include('components/Shelf', {posts: posts.featured, emphasis: true, shelf: "featured" }); %>
+
+            <h1 id="games" class="category">
+                <img src="/assets/icons/gamepad.svg" class="icon-img" /> Les Jeux
+                <hr /><a aria-label="Lien rapide vers les sites web" href="#websites">
+                    <img src="/assets/icons/chevrondown.svg" class="icon-img" />
+                </a>
+            </h1>
+            <%- include('components/Shelf', {posts: posts.games, shelf: "games" }); %>
+
+                <h1 id="websites" class="category">
+                    <img src="/assets/icons/internet.svg" class="icon-img" /> Les Sites/Outils Web
+                    <hr /><a aria-label="Lien rapide vers les sons" href="#music">
+                        <img src="/assets/icons/chevrondown.svg" class="icon-img" />
+                    </a>
+                </h1>
+                <%- include('components/Shelf', {posts: posts.websites, shelf: "websites" }); %>
+                    <h1 id="music" class="category">
+                        <img src="/assets/icons/headphones.svg" class="icon-img" /> Les Sons
+                        <hr /><a aria-label="Lien rapide vers les visuels" href="#images">
+                            <img src="/assets/icons/chevrondown.svg" class="icon-img" />
+                        </a>
+                    </h1>
+                    <%- include('components/Shelf', {posts: posts.music, shelf: "music" }); %>
+                        <h1 id="images" class="category">
+                            <img src="/assets/icons/palette.svg" class="icon-img" /> Les Visuels
+                            <hr /><a aria-label="Lien rapide vers les montages" href="#videos">
+                                <img src="/assets/icons/chevrondown.svg" class="icon-img" />
+                            </a>
+                        </h1>
+                        <%- include('components/Shelf', {posts: posts.images, shelf: "images" }); %>
+                            <h1 id="videos" class="category">
+                                <img src="/assets/icons/film.svg" class="icon-img" /> Les Montages
+                                <hr /><a aria-label="Retourner en haut" href="#top">
+                                    <img src="/assets/icons/chevronup.svg" class="icon-img" />
+                                </a>
+                            </h1>
+                            <%- include('components/Shelf', {posts: posts.videos, shelf: "videos" }); %>
+
+
+    </div>
+    <%- include('components/Tooltip') %>
+        <%- include('components/Header') %>
+            <%- include('components/Footer') %>
+                <%- include('components/LoadPage') %>
+
+</body>
+
+</html>

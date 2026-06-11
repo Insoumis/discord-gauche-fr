@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <%- include('components/headdefault')%>
+        <style>
+            body {
+                margin: 0;
+                position: absolute;
+                inset: 0;
+                display: flex;
+                flex-direction: column;
+                background-color: var(--color-noir);
+                color: var(--color-blanc);
+                font-family: Grotesk;
+                z-index: 1;
+                width: 100%;
+            }
+
+            #about {
+                z-index: 1;
+                position: absolute;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                max-height: 100%;
+                overflow: hidden;
+                background-color: rgba(0, 0, 0, 0.7);
+                inset: 0;
+                color: var(--color-blanc);
+            }
+
+            #content {
+                padding: 20px;
+                padding-top: 5rem;
+                max-width: 100%;
+                width: 1000px;
+                height: 100%;
+                overflow-y: scroll;
+                background-color: var(--color-noir);
+                box-shadow: 0 0 2rem black;
+                box-sizing: border-box;
+            }
+
+            #about-logo {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            #about-logo>img {
+                width: 300px;
+                height: 296px;
+                background-color: var(--color-violet);
+                padding: 20px;
+                border-radius: 20px;
+            }
+
+            #about-description {
+                border-left: 2px solid var(--color-jaune);
+                padding: 10px;
+            }
+
+            .about-button {
+                flex-grow: 1;
+                background-color: var(--color-violet);
+            }
+
+            /* #header-logo {
+                position: absolute;
+                left: 20px;
+                top: 5px;
+            }
+
+            #header-logo>span {
+                display: none;
+
+                @media (width >=40rem) {
+                    display: flex;
+                }
+            } */
+        </style>
+</head>
+
+<body>
+    <%- include('components/SlideShow'); %>
+
+        <div id="about">
+            <div id="content">
+                <br />
+                <p id="about-logo"><img src="/assets/LOGO C BARRICADE BLANC.svg" class="glowbox" /></p>
+                <br /><br />
+                <h1>N'attendez pas les consignes</h1>
+                <p id="about-description">
+                    La Barricade est le premier serveur Discord de Gauche FR !<br /><br />
+                    Depuis 2016 et motivé·e·s par la perspective de pousser l'Avenir en Commun au pouvoir comme
+                    programme politique à vocation unitaire, les milliers de membres du serveur s'organisent et
+                    produisent des outils et des contenus numériques destinés à la vulgarisation de nos idées et au
+                    militantisme en général.<br /><br />
+                    Réalisées en indépendance des partis, certaines productions ont eu l'occasion d'influencer les
+                    dernières campagnes ⏭️
+                </p><br />
+                <div style="display: flex; flex-direction: row; gap: 0.75rem;">
+                    <a href="https://discord.gg/barricade" target="_blank" rel="noopener noreferrer"
+                        class="about-button btn" aria-label="Rejoins le collectif">
+                        <img src="/assets/discord.svg" class="icon-img" />
+                        Rejoins le collectif ♡
+                    </a>
+                    <a href="/" rel="noopener noreferrer" class="about-button btn"
+                        style="background-color: var(--color-bleu);">
+                        <img src="/assets/icons/disc.svg" class="icon-img" aria-label="Découvre les créations" />
+                        Découvre les créations
+                    </a>
+                </div><br />
+                <h1>Nous suivre</h1>
+
+                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+                    <a href="https://www.twitch.tv/la_barricade" target="_blank" rel="noopener noreferrer"
+                        aria-label="Twitch" class="icon">
+                        <img src="/assets/twitch.svg" alt="Twitch Logo" class="icon-img" />
+                    </a>
+
+                    <a href="https://bsky.app/profile/discordgauche.bsky.social " target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook" class="icon">
+                        <img src="/assets/bluesky.png" alt="Bluesky Logo" class="icon-img" />
+                    </a>
+
+                    <a href="https://piaille.fr/@DiscordGauche" target="_blank" rel="noopener noreferrer"
+                        aria-label="Mastodon" class="icon">
+                        <img src="/assets/masto.png" alt="Mastodon Logo" class="icon-img" />
+                    </a>
+
+                    <a href="https://www.facebook.com/discordgauche" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook" class="icon">
+                        <img src="/assets/facebook.png" alt="Facebook Logo" class="icon-img" />
+                    </a>
+
+                    <a href="https://www.instagram.com/discord.barricade/" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram" class="icon">
+                        <img src="/assets/instagram.png" alt="Instagram Logo" class="icon-img" />
+                    </a>
+
+                    <a href="https://x.com/DiscordGauche" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
+                        class="icon">
+                        <img src="/assets/twitter.png" alt="Twitter Logo" class="icon-img" />
+                    </a>
+
+                    <a href="https://www.tiktok.com/@distok_populaire" target="_blank" rel="noopener noreferrer"
+                        aria-label="TikTok" class="icon">
+                        <img src="/assets/Tiktok.png" alt="Tiktok Logo" class="icon-img" />
+                    </a>
+
+                    <a href="https://www.youtube.com/@la_barricade" target="_blank" rel="noopener noreferrer"
+                        aria-label="Youtube" class="icon">
+                        <img src="/assets/youtube.png" alt="Youtube Logo" class="icon-img" />
+                    </a>
+                </div><br />
+                <a href="/legal" aria-label="Mentions légales" style="color: var(--color-blanc);">
+                    Mention légales
+                </a>
+
+            </div>
+
+        </div>
+        <%- include('components/Header', {simplified: true}) %>
+</body>
+
+</html>

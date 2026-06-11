@@ -1,0 +1,18 @@
+<div class="shelf" id="<%= `key-${shelf}` %>">
+    <% posts.forEach((post,index)=> {%>
+        <div class="<%= typeof emphasis !='undefined'  && index==0 ? 'shelf-post emphasis' : 'shelf-post' %>">
+            <div class="shelf-post-cnt">
+                <a id="<%= post.id %>" href="/prods/<%= post.id %>" alt="<%= post.title %>" class="post-link" aria-label="<%= post.title %>"
+                    onmouseleave="return onLeaveProd();" onmouseover="return onHoverProd(this.id);"
+                    onclick="return linkClicked(this.href, this.target);">
+                    <img class="<%= typeof emphasis !='undefined'  && index==0 ? 'shelf-post-img emphasis' : 'shelf-post-img' %>"
+                        src="<%= `/${typeof emphasis !='undefined' && index==0 ? 'banners' : 'covers'}/${post.id}.png` %>"
+                        alt="<%= post.title %>" />
+                    <div class="shelf-post-title">
+                        <%= post.title %>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <% });%>
+</div>

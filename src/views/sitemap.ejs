@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+
+        <loc>https://discord-gauche.com/</loc>
+
+        <changefreq>monthly</changefreq>
+
+        <priority>1</priority>
+
+    </url>
+
+    <url>
+
+        <loc>https://discord-gauche.com/a-propos</loc>
+
+        <changefreq>monthly</changefreq>
+
+    </url>
+
+    <url>
+
+        <loc>https://discord-gauche.com/legal</loc>
+
+        <changefreq>monthly</changefreq>
+
+    </url>
+
+    <% posts.forEach(post=> { %>
+
+        <url>
+
+            <loc>
+                https://discord-gauche.com/prods/<%= post.id %>
+            </loc>
+
+            <changefreq>monthly</changefreq>
+
+        </url>
+        <% }); %> 
+
+</urlset>

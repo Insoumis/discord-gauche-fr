@@ -11,10 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
-public/banners/*
-public/covers/*
-public/images/*
-public/resources/*
+src/public/banners/*
+src/public/covers/*
+src/public/images/*
 
 # Editor directories and files
 .vscode/*

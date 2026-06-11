@@ -1,0 +1,112 @@
+<div id="footer">
+    <div id="footer-rs">
+        <a href="a-propos" rel="noopener noreferrer" aria-label="Qui sommes-nous ?" class="icon"
+            onclick="return linkClicked(this.href, this.target);">
+            <img src="/images/PP.png" alt="Barricade Logo" class="icon-logo-img" />
+        </a>
+        <a href="https://www.twitch.tv/la_barricade" target="_blank" rel="noopener noreferrer" aria-label="Twitch"
+            class="icon">
+            <img src="/assets/twitch.svg" alt="Twitch Logo" class="icon-img" />
+        </a>
+
+        <a href="https://bsky.app/profile/discordgauche.bsky.social " target="_blank" rel="noopener noreferrer"
+            aria-label="Facebook" class="icon">
+            <img src="/assets/bluesky.png" alt="Bluesky Logo" class="icon-img" />
+        </a>
+
+        <a href=" https://piaille.fr/@DiscordGauche" target="_blank" rel="noopener noreferrer" aria-label="Mastodon"
+            class="icon">
+            <img src="/assets/masto.png" alt="Mastodon Logo" class="icon-img" />
+        </a>
+
+        <a href="https://www.facebook.com/discordgauche" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+            class="icon">
+            <img src="/assets/facebook.png" alt="Facebook Logo" class="icon-img" />
+        </a>
+
+        <a href="https://www.instagram.com/discord.barricade/" target="_blank" rel="noopener noreferrer"
+            aria-label="Instagram" class="icon">
+            <img src="/assets/instagram.png" alt="Instagram Logo" class="icon-img" />
+        </a>
+
+        <a href="https://x.com/DiscordGauche" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
+            class="icon">
+            <img src="/assets/twitter.png" alt="Twitter Logo" class="icon-img" />
+        </a>
+
+        <a href="https://www.tiktok.com/@distok_populaire" target="_blank" rel="noopener noreferrer" aria-label="TikTok"
+            class="icon">
+            <img src="/assets/Tiktok.png" alt="Tiktok Logo" class="icon-img" />
+        </a>
+
+        <a href="https://www.youtube.com/@la_barricade" target="_blank" rel="noopener noreferrer" aria-label="Youtube"
+            class="icon">
+            <img src="/assets/youtube.png" alt="Youtube Logo" class="icon-img" />
+        </a>
+    </div>
+    <a class="footer-link" style="margin-left: auto;" href="a-propos" aria-label="À propos"
+        onclick="return linkClicked(this.href, this.target);">
+        À propos
+    </a>
+    <a class="footer-link" href="/legal" aria-label="Mentions légales"
+        onclick="return linkClicked(this.href, this.target);">
+        Légal
+    </a>
+    <a href="https://discord.gg/barricade" target="_blank" rel="noopener noreferrer" id="footer-join" class="btn" aria-label="Rejoins le collectif">
+        <img src="/assets/discord.svg" alt="Discord Logo" class="icon-img" />
+        Rejoins le collectif !
+    </a>
+</div>
+
+<style>
+    #footer {
+        z-index: 1;
+        background-color: var(--color-violet);
+        color: var(--color-blanc);
+        padding: 1rem;
+        box-shadow: 0 0 0.5rem black;
+        display: flex;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    #footer-rs {
+        display: none;
+        align-items: center;
+        gap: 0.75rem;
+
+        @media (width >=40rem) {
+            display: flex;
+        }
+    }
+
+    .icon {
+        transition: opacity 150ms;
+    }
+
+    .icon:hover {
+        opacity: 75%;
+    }
+
+    .icon-logo-img {
+        width: 3rem;
+        height: 3rem;
+        box-shadow: 0 0.25rem 0.25rem black;
+    }
+
+
+    .footer-link {
+        border-right: 1px solid;
+        padding-right: 0.5rem;
+        margin-right: 0.5rem;
+        color: var(--color-blanc);
+    }
+
+    #footer-join {
+        background-color: var(--color-rouge);
+    }
+</style>
