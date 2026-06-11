@@ -20,6 +20,11 @@
                     "link": "https://bd.laec.fr/",
                     "title": "Accéder à la version bande dessinée",
                     "icon": "pointer"
+                },
+                {
+                    "link": "https://mo.laec.fr/",
+                    "title": "MOLAEC : Deviner la mesure du jour",
+                    "icon": "pointer"
                 }
             ]
         },
@@ -301,7 +306,7 @@
         {
             "id": "toktok",
             "title": "TokTok",
-            "description": "L'application de suivi de porte-à-porte, intégrée à Action Populaire",
+            "description": "L'application de suivi de porte-à-porte intégrée à Action Populaire",
             "year": "2022",
             "tags": [
                 "TERRAIN",
@@ -310,9 +315,72 @@
             ],
             "access": [
                 {
-                    "link": "https://actionpopulaire.fr/",
+                    "link": "https://actionpopulaire.fr/agir/",
                     "title": "Ouvrir Action Populaire",
                     "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "boussole-gaza",
+            "title": "La boussole Gaza",
+            "description": "L'outil citoyen qui rend compte des positionnements idéologiques des élus vis-à-vis du conflit colonial en Palestine",
+            "year": "2025",
+            "tags": [
+                "MILITANTISME",
+                "APPLICATION",
+                "GAZA",
+                "PALESTINE",
+                "SITE"
+            ],
+            "access": [
+                {
+                    "link": "https://la-boussole-gaza.fr/",
+                    "title": "Visiter le site",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "interpelmail",
+            "title": "InterpelMail",
+            "description": "Préparer des campagnes email pour interpeler les élu·e·s",
+            "year": "2026",
+            "tags": [
+                "MILITANTISME",
+                "APPLICATION",
+                "SITE",
+                "EMAIL"
+            ],
+            "access": [
+                {
+                    "link": "https://interpelmail.pages.dev/",
+                    "title": "Visiter le site",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "global-sumud-2025",
+            "title": "Soutien à la Global Sumud Flotilla",
+            "description": "La Barricade apporte son soutien à l'initiative de la Global Sumud Flotilla",
+            "year": "2025",
+            "tags": [
+                "VIDEO",
+                "MONTAGE",
+                "GAZA",
+                "PALESTINE"
+            ],
+            "access": [
+                {
+                    "link": "https://bsky.app/profile/discord-gauche.fr/post/3lzvsdnmaos22",
+                    "title": "Visionner sur Bluesky",
+                    "icon": "play"
+                },
+                {
+                    "link": "https://x.com/DiscordGauche/status/1972308232350683401",
+                    "title": "Visionner sur Twitter",
+                    "icon": "play"
                 }
             ]
         }
@@ -331,8 +399,10 @@
         ],
         "websites": [
             "laec-fr",
-            "melenshack",
             "toktok",
+            "boussole-gaza",
+            "melenshack",
+            "interpelmail",
             "la-manufacture"
         ],
         "music": [
@@ -342,6 +412,7 @@
             "lucie-pm"
         ],
         "videos": [
+            "global-sumud-2025",
             "melenchon-v-zemmour"
         ],
         "images": [
