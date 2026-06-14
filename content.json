@@ -315,8 +315,8 @@
             ],
             "access": [
                 {
-                    "link": "https://actionpopulaire.fr/agir/",
-                    "title": "Ouvrir Action Populaire",
+                    "link": "https://toktok.actionpopulaire.fr/",
+                    "title": "Ouvrir TokTok",
                     "icon": "pointer"
                 }
             ]
