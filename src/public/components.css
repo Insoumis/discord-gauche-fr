@@ -56,15 +56,19 @@
 }
 
 .shelf-post-cnt>a:hover {
-    border-color: var(--color-blanc);
-    transform: matrix(0.8, 0.05, 0, 0.8, 1, 0);
-    color: var(--color-blanc);
+    @media (width >=40rem) {
+        border-color: var(--color-blanc);
+        transform: matrix(0.8, 0.05, 0, 0.8, 1, 0);
+        color: var(--color-blanc);
+    }
 }
 
 .shelf-post-cnt>a:focus {
-    border-color: var(--color-blanc);
-    transform: matrix(0.8, 0.05, 0, 0.8, 1, 0);
-    color: var(--color-blanc);
+    @media (width >=40rem) {
+        border-color: var(--color-blanc);
+        transform: matrix(0.8, 0.05, 0, 0.8, 1, 0);
+        color: var(--color-blanc);
+    }
 }
 
 .shelf-post-title {
