@@ -27,7 +27,8 @@ export function searchContent(pattern) {
     }
 
     for (let [id, val] of Object.entries(searchIndex)) {
-        if (val.toUpperCase().includes(pattern)) {
+        if (val.normalize("NFD").replace(/\p{Diacritic}/gu, "")
+            .toUpperCase().includes(pattern)) {
             matches.push(id)
         }
     }
@@ -60,4 +61,13 @@ export function searchContent(pattern) {
 export function resetSearchContent() {
     document.getElementById("search-bar").value = ""
     searchContent("")
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+const searchQuery = urlParams.get('recherche');
+
+if (searchQuery && searchQuery.length > 0) {
+    document.getElementById("search-bar").value = searchQuery
+    searchContent(searchQuery.normalize("NFD").replace(/\p{Diacritic}/gu, "")
+        .toUpperCase())
 }
