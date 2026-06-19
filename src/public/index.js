@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.linkClicked = function (link, target) {
     document.getElementById("load-page").style.setProperty("display", "flex")
-    setTimeout(() => window.open(link, "_self"), 1000)
+    setTimeout(() => window.open(link, "_self"), 800)
     setTimeout(() => document.getElementById("load-page").style.setProperty("display", "none"), 1100)
     return false
 }
