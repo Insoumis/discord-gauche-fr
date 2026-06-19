@@ -2,8 +2,8 @@
 <html lang="fr">
 
 <head>
-    <%- include('components/head', {title: `${post.title}` , image: `/covers/${post.id}.png`, card: "summary_large_image" , description:
-        `${post.description}` }); %>
+    <%- include('components/head', {title: `${post.title}` , image: `/covers/${post.id}.png`,
+        card: "summary_large_image" , description: `${post.description}` }); %>
         <style>
             body {
                 margin: 0;
@@ -129,11 +129,12 @@
     <div id="prod-content">
         <p id="prod-description">
             <img src="/assets/icons/info.svg" class="icon-img" />
-            <%- post.description.replace("\n", "<br /><br />") %>
+            <%- post.description.replace("\n", "<br /><br />" ) %>
         </p>
         <div id="prod-links">
             <% post.access.forEach((btn)=> {%>
-                <a class="prod-link btn" href="<%= btn.link %>" target="_blank" rel="noopener noreferrer" aria-label="<%= btn.title %>">
+                <a class="prod-link btn" href="<%= btn.link %>" target="_blank" rel="noopener noreferrer"
+                    aria-label="<%= btn.title %>">
                     <% if (btn.icon==='pointer' ) { %>
                         <img src="/assets/icons/pointer.svg" class="icon-img" />
                         <% } else if (btn.icon==='download' ) { %>
@@ -147,10 +148,7 @@
 
         </div>
     </div>
-
-    <a id="header-logo" href="/" alt="retour" aria-label="Retour à l'accueil">
-        <img src="/assets/LOGO I BARRICADE BLANC.svg" style="width: 2rem;" /><span>La Barricade</span>
-    </a>
+    <%- include('components/Header', {simplified: true}) %>
 </body>
 
 </html>

@@ -21,8 +21,6 @@
                 flex: 1;
                 display: flex;
                 flex-direction: column;
-                padding-block: 5rem;
-                padding-bottom: 20rem;
                 overflow: hidden;
                 overflow-y: scroll;
                 color: var(--color-blanc);
@@ -50,17 +48,189 @@
             h1 {
                 font-size: x-large;
             }
+
+            #slideshow {
+                position: relative;
+                display: block;
+
+                @media (width >=40rem) {
+                    min-height: 100%;
+                    overflow: hidden;
+                }
+            }
+
+            #about {
+                top: 6rem;
+                inset-inline: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                background-color: rgba(0, 0, 0, 0.699);
+                padding: 2rem;
+                transition: transform 500ms;
+
+                @media (width >=40rem) {
+                    position: absolute;
+                    inset-inline: 10%;
+                    box-shadow: 0.5rem 0.5rem 0.5rem var(--color-noir);
+                    border-top-left-radius: 200px;
+                    border-bottom-right-radius: 200px;
+                }
+            }
+
+            #about-content {
+                display: flex;
+                flex-direction: column;
+                gap: 4rem;
+                align-items: center;
+
+                @media (width >=40rem) {
+                    flex-direction: row;
+                    padding: 4rem;
+                }
+            }
+
+            #about-logo {
+                margin-top: 4rem;
+                display: flex;
+                justify-content: center;
+                user-select: none;
+
+                animation: wiggle 10s infinite;
+
+                @media (width >=40rem) {
+                    margin-top: 0;
+                }
+            }
+
+            #about-logo>img {
+                width: 10rem;
+                height: 10rem;
+                background-color: var(--color-violet);
+                padding: 20px;
+                border-top-left-radius: 150px;
+                border-bottom-left-radius: 20px;
+
+                @media (width >=40rem) {
+                    width: 15vw;
+                    height: 15vw;
+                }
+            }
+
+            #about-description {
+                padding-left: 2rem;
+                border-left: 2px solid var(--color-jaune);
+                transition: transform 500ms;
+
+            }
+
+            #about-description:hover {
+                @media (width >=40rem) {
+                    transform: matrix(0.95, 0.02, 0, 0.95, 1, 0);
+                }
+            }
+
+            #about-buttons {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                flex-direction: column;
+
+                @media (width >=40rem) {
+                    gap: 2rem;
+                    flex-direction: row;
+                }
+            }
+
+            #about-buttons>.btn {
+                font-size: larger;
+                border-radius: 0;
+                font-family: Mohave;
+                font-style: italic;
+                transition: box-shadow 500ms, opacity 500ms, margin 100ms;
+                background-color: var(--color-rouge);
+
+                @media (width >=40rem) {
+                    font-size: 2vw;
+                }
+            }
+
+            #about-buttons>#main-btn-discord {
+                background: linear-gradient(45deg, var(--color-violet), rgb(69, 15, 82));
+            }
+
+            #about-buttons>#main-btn-discord:hover {
+                opacity: 100;
+                box-shadow: -0.5vw -0.5vw var(--color-blanc), 0.5vw 0.5vw var(--color-blanc);
+            }
+
+            #about-buttons>.btn:active {
+                margin-top: 0.5vw;
+                margin-bottom: -0.5vw;
+            }
+
+            #about-buttons>.btn>.icon-img {
+                @media (width >=40rem) {
+                    width: 3vw;
+                    height: 3vw;
+                }
+            }
         </style>
 </head>
 
 <body>
-    <div id="menus">
-        <h1 id="top" style="scroll-margin-top: 60px;"></h1>
+    <div id="menus" onscroll="return onScrollMenu();">
+        <h1 id="top" style="margin: 0;"></h1>
+        <div id="slideshow">
+            <%- include('components/SlideShow', {posts: content.entries }); %>
+                <div id="about">
+                    <div id="about-content">
+                        <div id="about-logo">
+                            <img src="/assets/LOGO C BARRICADE BLANC.svg" class="glowbox" />
+                        </div>
+                        <div id="about-description">
+                            <h1 style="font-family: Mohave; font-size: xx-large; font-style: italic;" class="glow">N'ATTENDEZ PAS LES
+                                CONSIGNES</h1>
+                            <b style="font-size: large;">ㄥ</b>a Barricade <a target="_blank"
+                                style="color: var(--color-blanc);"
+                                aria-label="Lien vers le post sur Discord concernant le changement de nom"
+                                href="https://discord.com/channels/254215611264008192/278882248260976641/1141400987832176750">(anciennement
+                                « <i>le Discord Insoumis</i> »)</a> est le premier serveur Discord de
+                            Gauche FR ↙<br /><br />
+                            Depuis 2016 et motivé·e·s par la perspective de pousser <b class="glow">l'Avenir en Commun</b> au
+                            pouvoir
+                            comme
+                            programme politique à vocation <a target="_blank" style="color: var(--color-blanc);"
+                                aria-label="Lien X-ex-Twitter vers un post de la Barricade"
+                                href="https://x.com/DiscordGauche/status/1812203462181921009">unitaire et dégagiste</a>,
+                            les milliers de membres du serveur s'organisent et produisent des outils et des contenus
+                            numériques. L'objectif est de vulgariser les concepts, affronter les enjeux d'un
+                            anthropocène colonial
+                            cynique, abattre la résignation ↙<br /><br />
+                            Réalisées en indépendance des partis, ces productions ont parfois influencé les
+                            dernières campagnes électorales ᯓ⿻ˎˊ˗
+                        </div>
+                    </div>
+                    <div id="about-buttons">
+                        <a href="https://discord.gg/barricade" target="_blank" rel="noopener noreferrer"
+                            id="main-btn-discord" class="btn" aria-label="Rejoins le discord">
+                            <img src="/assets/discord.svg" alt="Discord Logo" class="icon-img" />
+                            REJOINDRE LE DISCORD
+                        </a>
+                        <a href="#featured" class="btn" aria-label="Découvre les créations">
+                            <img src="/assets/icons/angledown.svg" alt="Discord Logo" class="icon-img" />
+                            NOS CRÉATIONS
+                        </a>
+                    </div>
+                </div>
+        </div>
 
-        <h1 id="featured" class="category">
+        <h1 id="featured" style="margin-top: 4rem; scroll-margin-top: 4rem;" class="category">
             <img src="/assets/icons/star.svg" class="icon-img" /> Les Incontournables
             <hr /><a aria-label="Lien rapide vers les jeux" href="#games">
-                <img src="/assets/icons/chevrondown.svg" class="icon-img" />
+                <img src="/assets/icons/angledown.svg" class="icon-img" />
             </a>
         </h1>
         <%- include('components/Shelf', {posts: posts.featured, emphasis: true, shelf: "featured" }); %>
@@ -68,7 +238,7 @@
             <h1 id="games" class="category">
                 <img src="/assets/icons/gamepad.svg" class="icon-img" /> Les Jeux
                 <hr /><a aria-label="Lien rapide vers les sites web" href="#websites">
-                    <img src="/assets/icons/chevrondown.svg" class="icon-img" />
+                    <img src="/assets/icons/angledown.svg" class="icon-img" />
                 </a>
             </h1>
             <%- include('components/Shelf', {posts: posts.games, shelf: "games" }); %>
@@ -76,32 +246,32 @@
                 <h1 id="websites" class="category">
                     <img src="/assets/icons/internet.svg" class="icon-img" /> Les Sites/Outils Web
                     <hr /><a aria-label="Lien rapide vers les sons" href="#music">
-                        <img src="/assets/icons/chevrondown.svg" class="icon-img" />
+                        <img src="/assets/icons/angledown.svg" class="icon-img" />
                     </a>
                 </h1>
                 <%- include('components/Shelf', {posts: posts.websites, shelf: "websites" }); %>
                     <h1 id="music" class="category">
                         <img src="/assets/icons/headphones.svg" class="icon-img" /> Les Sons
                         <hr /><a aria-label="Lien rapide vers les visuels" href="#images">
-                            <img src="/assets/icons/chevrondown.svg" class="icon-img" />
+                            <img src="/assets/icons/angledown.svg" class="icon-img" />
                         </a>
                     </h1>
                     <%- include('components/Shelf', {posts: posts.music, shelf: "music" }); %>
                         <h1 id="images" class="category">
                             <img src="/assets/icons/palette.svg" class="icon-img" /> Les Visuels
                             <hr /><a aria-label="Lien rapide vers les montages" href="#videos">
-                                <img src="/assets/icons/chevrondown.svg" class="icon-img" />
+                                <img src="/assets/icons/angledown.svg" class="icon-img" />
                             </a>
                         </h1>
                         <%- include('components/Shelf', {posts: posts.images, shelf: "images" }); %>
                             <h1 id="videos" class="category">
                                 <img src="/assets/icons/film.svg" class="icon-img" /> Les Montages
-                                <hr /><a aria-label="Retourner en haut" href="#top">
+                                <hr /><a aria-label="Retourner en haut" href="#featured">
                                     <img src="/assets/icons/chevronup.svg" class="icon-img" />
                                 </a>
                             </h1>
                             <%- include('components/Shelf', {posts: posts.videos, shelf: "videos" }); %>
-
+                                <div style="min-height: 6rem;"></div>
 
     </div>
     <%- include('components/Tooltip') %>

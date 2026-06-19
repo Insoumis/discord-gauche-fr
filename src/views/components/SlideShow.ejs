@@ -1,30 +1,24 @@
 <style>
-    #slideshow {
-        z-index: 1;
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        max-height: 100%;
-        overflow: hidden;
-        inset: 0;
-        transition: opacity;
-    }
-
     .slide {
-        filter: blur(10px);
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-size: cover;
-        opacity: 0;
-        transition: opacity 2s, transform 10s;
+        display: none;
+
+        @media (width >=40rem) {
+            display: block;
+            z-index: -1;
+            filter: blur(15px);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 2s, transform 10s;
+        }
     }
 </style>
-<div id="slideshow">
-    <% posts.forEach((post,index)=> {%>
-        <div id="<%= 'banner-' + post.id %>" class="slide" style="background-image: url(/banners/<%= post.id %>.png);">
-        </div>
-        <% }) %>
-</div>
-<script type="module" crossorigin="" src="/slide.js"></script>
+<% posts.forEach((post,index)=> {%>
+    <div id="<%= 'banner-' + post.id %>" class="slide" style="background-image: url(/banners/<%= post.id %>.png);">
+    </div>
+    <% }) %>
+    <div class="slide" style="background-color: var(--color-noir); opacity: 0.5; filter: blur(0);"></div>
+        <script type="module" crossorigin="" src="/slide.js"></script>

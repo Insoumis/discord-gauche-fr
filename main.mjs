@@ -15,17 +15,8 @@ export const main = async () => {
 
     fs.cpSync("./src/public", DIST, { recursive: true });
 
-    let html = await ejs.renderFile(`${VIEWS}/_index.ejs`, { posts: POSTS });
+    let html = await ejs.renderFile(`${VIEWS}/_index.ejs`, { posts: POSTS, content: CONTENT });
     await fs.writeFile(`${DIST}/index.html`, html, { flag: 'w' }, err => {
-        if (err) {
-            console.error(err);
-        } else {
-            // file written successfully
-        }
-    });
-
-    html = await ejs.renderFile(`${VIEWS}/about.ejs`, { posts: CONTENT.entries });
-    await fs.writeFile(`${DIST}/a-propos.html`, html, { flag: 'w' }, err => {
         if (err) {
             console.error(err);
         } else {

@@ -49,7 +49,7 @@ body {
     animation: glowbox 1s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow {
+@keyframes glow {
     from {
         text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ae3cc7, 0 0 20px #ae3cc7, 0 0 25px #ae3cc7, 0 0 30px #ae3cc7, 0 0 35px #ae3cc7;
     }
@@ -59,12 +59,12 @@ body {
     }
 }
 
-@-webkit-keyframes glowbox {
-    from {
+@keyframes glowbox {
+    0% {
         box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ae3cc7, 0 0 20px #ae3cc7, 0 0 25px #ae3cc7, 0 0 30px #ae3cc7, 0 0 35px #ae3cc7;
     }
 
-    to {
+    100% {
         box-shadow: 0 0 10px #fff, 0 0 15px #de4dff, 0 0 20px #de4dff, 0 0 25px #de4dff, 0 0 30px #de4dff, 0 0 35px #de4dff, 0 0 40px #de4dff;
     }
 }
@@ -79,6 +79,36 @@ body {
     }
 }
 
+@keyframes rubberBand {
+    0% {
+        transform: scale3d(1, 1, 1)
+    }
+
+    30% {
+        transform: scale3d(1.25, .75, 1)
+    }
+
+    40% {
+        transform: scale3d(0.75, 1.25, 1)
+    }
+
+    50% {
+        transform: scale3d(1.15, .85, 1)
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1)
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1)
+    }
+
+    100% {
+        transform: scale3d(1, 1, 1)
+    }
+}
+
 
 .btn {
     text-decoration: none;
@@ -87,7 +117,6 @@ body {
     font-weight: bold;
     padding-block: 0.75rem;
     padding-inline: 1.5rem;
-    border-radius: 100px;
     box-shadow: 0.25rem 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
@@ -107,7 +136,7 @@ body {
 
 #header-logo {
     height: 3rem;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     margin-left: 10px;
@@ -137,4 +166,83 @@ body {
 
 #header-logo:focus {
     filter: invert(100);
+}
+
+@keyframes wiggle {
+    0% {
+        transform: translateX(0);
+        filter: hue-rotate(0);
+    }
+
+    77% {
+        transform: translateX(0);
+        filter: hue-rotate(0);
+    }
+
+    77.5% {
+        transform: translateX(2px);
+        filter: blur(5px);
+    }
+
+    78% {
+        transform: translateX(0);
+        filter: hue-rotate(0);
+    }
+
+    94.5% {
+        transform: translateX(0);
+        filter: hue-rotate(0);
+    }
+
+    95% {
+        transform: translateX(10px);
+        filter: blur(3px) hue-rotate(90deg);
+    }
+
+    95.5% {
+        transform: translateX(4px);
+        filter: blur(0);
+    }
+
+    96% {
+        transform: translateX(-5px) skew(0deg);
+        filter: blur(3px);
+    }
+
+    96.5% {
+        transform: translateX(7px);
+        filter: blur(0) hue-rotate(-90deg);
+    }
+
+    97% {
+        transform: translateX(3px);
+    }
+
+    97.5% {
+        transform: translateX(2px);
+        filter: blur(5px);
+    }
+
+    98% {
+        transform: translateX(-2px);
+        filter: blur(0);
+    }
+
+    98.5% {
+        transform: translateX(3px);
+        filter: blur(2px);
+    }
+
+    99% {
+        transform: translateX(-3px);
+    }
+
+    99.5% {
+        transform: skewX(10deg);
+    }
+
+    100% {
+        transform: translateX(3px);
+        filter: blur(0);
+    }
 }

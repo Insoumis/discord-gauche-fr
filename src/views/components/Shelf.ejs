@@ -2,9 +2,10 @@
     <% posts.forEach((post,index)=> {%>
         <div class="<%= typeof emphasis !='undefined'  && index==0 ? 'shelf-post emphasis' : 'shelf-post' %>">
             <div class="shelf-post-cnt">
-                <a id="<%= post.id %>" href="/prods/<%= post.id %>" alt="<%= post.title %>" class="post-link" aria-label="<%= post.title %>"
-                    onmouseleave="return onLeaveProd();" onmouseover="return onHoverProd(this.id);"
-                    onclick="return linkClicked(this.href, this.target);">
+                <a id="<%= post.id %>" href="/prods/<%= post.id %>" alt="<%= post.title %>" class="post-link"
+                    aria-label="<%= post.title %>" onmouseleave="return onLeaveProd();"
+                    onmouseover="return onHoverProd(this.id);" onfocusout="return onLeaveProd();"
+                    onfocus="return onHoverProd(this.id);" onclick="return linkClicked(this.href, this.target);">
                     <img class="<%= typeof emphasis !='undefined'  && index==0 ? 'shelf-post-img emphasis' : 'shelf-post-img' %>"
                         src="<%= `/${typeof emphasis !='undefined' && index==0 ? 'banners' : 'covers'}/${post.id}.png` %>"
                         alt="<%= post.title %>" />

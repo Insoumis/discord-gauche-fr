@@ -1,7 +1,7 @@
 <header>
-    <nav class="<%= typeof simplified == 'undefined' ? '' : 'simplified' %>">
-        <a tabIndex="1" href="<%= typeof simplified=='undefined' ? '/a-propos' : '/' %>" id="header-logo"
-            onclick="return linkClicked(this.href, this.target);" aria-label="Qui sommes-nous ?">
+    <nav class="<%= typeof bg == 'undefined' ? '' : 'simplified' %>">
+        <a href="<%= typeof simplified=='undefined' ? '#top' : '/' %>" id="header-logo" style="display: <%= typeof simplified == 'undefined' ? 'none' : 'flex' %>"
+            aria-label="Qui sommes-nous ?">
             <img src="/assets/LOGO I BARRICADE BLANC.svg" alt="Le logo de la Barricade" style="width: 2rem;" /><span>La
                 Barricade</span>
         </a>
@@ -9,7 +9,8 @@
             <label for="search-bar" id="search-bar-label">
                 <img src="/assets/icons/mag.svg" width="30px">
             </label>
-            <input tabIndex="2" id="search-bar" oninput="return searchTyping(this.value)" aria-label="Taper un mot-clé pour filtrer les résultats" />
+            <input tabIndex="1" id="search-bar" oninput="return searchTyping(this.value)"
+                aria-label="Taper un mot-clé pour filtrer les résultats" />
             <img id="search-cross" src="/assets/icons/xmark.svg" class="icon-img" onclick="return resetSearch()" />
             <b id="time">00:00:00</b>
             <% } %>
@@ -33,6 +34,7 @@
         flex: 1;
         flex-wrap: wrap;
         align-items: center;
+        justify-content: flex-end;
         box-sizing: border-box;
     }
 

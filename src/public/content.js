@@ -18,10 +18,12 @@ export function searchContent(pattern) {
     let curShelfMatchingPosts = 0
 
     if (pattern.length > 0) {
+        document.getElementById("slideshow").style.setProperty("display", "none")
         document.getElementById("search-bar").classList.add("has-content")
         document.getElementById("search-cross").classList.add("has-content")
     }
     else {
+        document.getElementById("slideshow").style.setProperty("display", "block")
         document.getElementById("search-bar").classList.remove("has-content")
         document.getElementById("search-cross").classList.remove("has-content")
     }
@@ -71,3 +73,15 @@ if (searchQuery && searchQuery.length > 0) {
     searchContent(searchQuery.normalize("NFD").replace(/\p{Diacritic}/gu, "")
         .toUpperCase())
 }
+
+document.onkeydown = function(e) {
+    if (e.ctrlKey && e.keyCode === 70) {
+        document.getElementById("search-bar").focus()
+        return false;
+    }
+    else if (e.key === "Escape") {
+        resetSearchContent();
+        document.getElementById("search-bar").blur()
+        return false;
+    }
+};
