@@ -41,26 +41,56 @@
                 "SECOUER",
                 "FISKAL",
                 "FISCAL COMBAT",
-                "AUBRY",
-                "MANON",
-                "JEAN LUC",
-                "MOBILE"
+                "JEAN LUC"
             ],
             "access": [
                 {
                     "link": "https://bobysait.com/fiscalkombat.fr/web/",
-                    "title": "Jouer à la version 2017 (via bobysait.com)",
+                    "title": "Jouer via bobysait.com",
                     "icon": "pointer"
+                },
+                {
+                    "link": "/resources/FiscalKombatTrailer.mp4",
+                    "title": "Bande Annonce",
+                    "icon": "play"
+                }
+            ]
+        },
+        {
+            "id": "fiscal-kombat-2",
+            "title": "Fiscal Kombat 2",
+            "description": "La version européenne 2019 !",
+            "year": "2019",
+            "tags": [
+                "JEU",
+                "RICHES",
+                "SECOUER",
+                "FISKAL",
+                "FISCAL COMBAT",
+                "AUBRY",
+                "MANON",
+                "MOBILE"
+            ],
+            "access": [
+                {
+                    "link": "/resources/Fiscal+Kombat+European+Edition_1.02_apkcombo.com.apk",
+                    "title": "Télécharger la version mobile (.apk Android)",
+                    "icon": "download"
                 },
                 {
                     "link": "https://web.archive.org/web/20201230162752/http://fiscalkombat.eu/",
-                    "title": "Jouer à la version 2019 (via archive.org)",
+                    "title": "Jouer via archive.org",
                     "icon": "pointer"
                 },
                 {
-                    "link": "/resources/Fiscal+Kombat+European+Edition_1.02_apkcombo.com.apk",
-                    "title": "Télécharger la version mobile 2019 (.apk Android)",
-                    "icon": "download"
+                    "link": "/resources/FiscalKombat2Trailer.mp4",
+                    "title": "Bande Annonce",
+                    "icon": "play"
+                },
+                {
+                    "link": "https://soundcloud.com/precheurius/sets/fiscal-kombat-eu-edition",
+                    "title": "La bande originale sur Soundcloud",
+                    "icon": "play"
                 }
             ]
         },
@@ -115,6 +145,11 @@
                     "link": "https://la-barricade.itch.io/laec-est-vous",
                     "title": "Jouer ! (via itch.io)",
                     "icon": "pointer"
+                },
+                {
+                    "link": "/resources/LAECestTOITrailer.mp4",
+                    "title": "Bande Annonce",
+                    "icon": "play"
                 }
             ]
         },
@@ -395,6 +430,7 @@
             "foule-populaire",
             "laec-est-toi",
             "fiscal-kombat",
+            "fiscal-kombat-2",
             "100-jours"
         ],
         "websites": [
