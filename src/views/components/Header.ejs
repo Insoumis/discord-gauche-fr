@@ -49,6 +49,7 @@
         align-items: center;
         justify-content: center;
         margin-left: 10px;
+        margin-right: 10px;
         cursor: pointer;
         filter: invert(100%);
         transition: filter 500ms, background-color 500ms;
@@ -73,23 +74,25 @@
         color: var(--color-noir);
         outline: none;
         background-color: transparent;
-        transition: background-color 500ms, max-width 500ms, backround-color 500ms;
+        transition: background-color 500ms, max-width 500ms, backround-color 500ms, margin-right 500ms;
     }
+
 
     #search-bar:focus,
     #search-bar.has-content {
+        margin: 0;
+        margin-right: 10px;
         padding: 2px;
         max-width: 100%;
         outline: none;
         appearance: none;
-        margin: 0;
         background-color: var(--color-blanc);
     }
 
     #search-cross {
         filter: invert(0);
-        margin-left: -2rem;
-        width: 2rem;
+        margin-left: -3rem;
+        width: 3rem;
         display: none;
         cursor: pointer;
     }
@@ -99,7 +102,6 @@
     }
 
     #time {
-        margin-left: 10px;
         display: none;
         user-select: none;
         margin-right: 20px;

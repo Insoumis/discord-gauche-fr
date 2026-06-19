@@ -74,5 +74,5 @@ export const main = async () => {
         }
     });
 
-    console.log("Build ok.")
+    console.log(new Date().toLocaleTimeString(), "Build ok.")
 }
