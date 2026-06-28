@@ -53,41 +53,41 @@
                 position: relative;
                 display: block;
 
-                @media (width >=40rem) {
+                @media (width >=60rem) {
                     min-height: 100%;
                     overflow: hidden;
                 }
             }
 
             #about {
-                top: 6rem;
+                top: 18vh;
                 inset-inline: 0;
                 display: flex;
                 flex-direction: column;
-                gap: 2rem;
+                gap: 2vh;
                 background-color: rgba(0, 0, 0, 0.699);
-                padding: 2rem;
+                padding: 2vh;
                 transition: transform 500ms;
                 border: 1px solid var(--color-violet);
 
-                @media (width >=40rem) {
+                @media (width >=60rem) {
                     position: absolute;
                     inset-inline: 10%;
                     box-shadow: 0.5rem 0.5rem 0.5rem var(--color-noir);
-                    border-top-left-radius: 200px;
-                    border-bottom-right-radius: 200px;
+                    border-top-left-radius: 20vh;
+                    border-bottom-right-radius: 20vh;
                 }
             }
 
             #about-content {
                 display: flex;
                 flex-direction: column;
-                gap: 4rem;
+                gap: 5vh;
                 align-items: center;
 
-                @media (width >=40rem) {
+                @media (width >=60rem) {
                     flex-direction: row;
-                    padding: 4rem;
+                    padding: 5vh;
                 }
             }
 
@@ -99,34 +99,48 @@
 
                 animation: wiggle 10s infinite;
 
-                @media (width >=40rem) {
+                @media (width >=60rem) {
                     margin-top: 0;
                 }
             }
 
             #about-logo>img {
-                width: 10rem;
-                height: 10rem;
+                width: 40vw;
+                height: 40vw;
                 background-color: var(--color-violet);
-                padding: 20px;
-                border-top-left-radius: 150px;
-                border-bottom-left-radius: 20px;
+                padding: 4vw;
+                border-top-left-radius: 20vw;
+                border-bottom-left-radius: 2vw;
 
-                @media (width >=40rem) {
+                @media (width >=60rem) {
                     width: 15vw;
                     height: 15vw;
+                    padding: 2vw;
+                    border-top-left-radius: 7.5vw;
+                    border-bottom-left-radius: 1vw;
                 }
             }
 
             #about-description {
-                padding-left: 2rem;
+                padding-left: 3vh;
                 border-left: 2px solid var(--color-jaune);
                 transition: transform 500ms;
+                font-size: medium;
 
+                @media (width >=60rem) {
+                    font-size: 2vh;
+                }
+            }
+
+            #about-description>h1 {
+                margin: 0;
+                font-family: Mohave;
+                font-size: 5vh;
+                font-style: italic;
             }
 
             #about-description:hover {
-                @media (width >=40rem) {
+                @media (width >=60rem) {
                     transform: matrix(0.95, 0.02, 0, 0.95, 1, 0);
                 }
             }
@@ -136,11 +150,11 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                gap: 1rem;
+                gap: 2vh;
                 flex-direction: column;
 
-                @media (width >=40rem) {
-                    gap: 2rem;
+                @media (width >=60rem) {
+                    gap: 4vh;
                     flex-direction: row;
                 }
             }
@@ -153,7 +167,7 @@
                 transition: box-shadow 500ms, opacity 500ms, margin 100ms;
                 background-color: var(--color-rouge);
 
-                @media (width >=40rem) {
+                @media (width >=60rem) {
                     font-size: 2vw;
                 }
             }
@@ -173,7 +187,7 @@
             }
 
             #about-buttons>.btn>.icon-img {
-                @media (width >=40rem) {
+                @media (width >=60rem) {
                     width: 3vw;
                     height: 3vw;
                 }
@@ -192,15 +206,16 @@
                             <img src="/assets/LOGO C BARRICADE BLANC.svg" class="glowbox" />
                         </div>
                         <div id="about-description">
-                            <h1 style="font-family: Mohave; font-size: xx-large; font-style: italic;" class="glow">N'ATTENDEZ PAS LES
+                            <h1 class="glow">N'ATTENDEZ PAS LES
                                 CONSIGNES</h1>
-                            <b style="font-size: large;">ㄥ</b>a Barricade <a target="_blank"
+                            <b style="font-size: 5vh;">ㄥ</b>a Barricade <a target="_blank"
                                 style="color: var(--color-blanc);"
                                 aria-label="Lien vers le post sur Discord concernant le changement de nom"
                                 href="https://discord.com/channels/254215611264008192/278882248260976641/1141400987832176750">(anciennement
                                 « <i>le Discord Insoumis</i> »)</a> est le premier serveur Discord de
                             Gauche FR ↙<br /><br />
-                            Depuis 2016 et motivé·e·s par la perspective de pousser <b class="glow">l'Avenir en Commun</b> au
+                            Depuis 2016 et motivé·e·s par la perspective de pousser <b class="glow">l'Avenir en
+                                Commun</b> au
                             pouvoir
                             comme
                             programme politique à vocation <a target="_blank" style="color: var(--color-blanc);"
