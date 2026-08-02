@@ -4,59 +4,60 @@
     gap: 1rem;
     margin-inline: 20px;
 
-    @media (width >=60rem) {
+    @media (width >=40rem) {
         flex-direction: row;
         overflow: hidden;
         overflow-x: auto;
-        min-height: 450px;
+        min-height: 36vh;
     }
 }
 
 .shelf-post {
-    min-width: 244px;
-    max-width: 244px;
-    min-height: 450px;
+    min-width: 24vh;
+    max-width: 24vh;
+    min-height: 36vh;
 
-    @media (width >=60rem) {
+    @media (width >=40rem) {
         overflow: hidden;
     }
 }
 
 .shelf-post.emphasis {
-    min-width: min(644px, 90%);
+    min-width: min(72vh, 90%);
     min-height: 300px;
     max-height: 300px;
 
-    @media (width >=60rem) {
-        min-height: 450px;
+    @media (width >=40rem) {
+        min-height: 36vh;
+        max-height: 36vh;
     }
 }
 
 .shelf-post-cnt {
     flex-direction: column;
 
-    @media (width >=60rem) {
+    @media (width >=40rem) {
         display: flex;
     }
 }
 
 .shelf-post-cnt>a {
     text-decoration: none;
-    max-height: 360px;
+    max-height: 36vh;
     outline: none;
     padding: 1px;
     border: 2px solid;
     border-color: transparent;
     color: var(--color-blanc);
-    transition: border 500ms, transform 500ms, color 500ms;
+    transition: border-color 500ms, transform 500ms, color 500ms;
 
-    @media (width >=60rem) {
+    @media (width >=40rem) {
         color: transparent;
     }
 }
 
 .shelf-post-cnt>a:hover {
-    @media (width >=60rem) {
+    @media (width >=40rem) {
         border-color: var(--color-blanc);
         transform: matrix(0.8, 0.05, 0, 0.8, 1, 0);
         color: var(--color-blanc);
@@ -64,7 +65,7 @@
 }
 
 .shelf-post-cnt>a:focus {
-    @media (width >=60rem) {
+    @media (width >=40rem) {
         border-color: var(--color-blanc);
         transform: matrix(0.8, 0.05, 0, 0.8, 1, 0);
         color: var(--color-blanc);
@@ -82,8 +83,8 @@
 
 .shelf-post-img {
     width: 100%;
-    min-height: 360px;
-    max-height: 360px;
+    min-height: 36vh;
+    max-height: 36vh;
     object-fit: cover;
 }
 
@@ -91,8 +92,8 @@
     min-height: 180px;
     max-height: 180px;
 
-    @media (width >=60rem) {
-        min-height: 360px;
-        max-height: 360px;
+    @media (width >=40rem) {
+        min-height: 36vh;
+        max-height: 36vh;
     }
 }

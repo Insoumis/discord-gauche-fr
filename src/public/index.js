@@ -3,11 +3,13 @@ import { getContentEntry, searchContent, resetSearchContent } from "/content.js"
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    window.onHoverProd = function (postId) {
-        const post = getContentEntry(postId)
-        document.getElementById("tooltip").style.setProperty("height", "220px")
-        document.getElementById("tooltip-img").src = `/banners/${post.id}.png`
-        document.getElementById("tooltip-text").textContent = post.description
+    window.onHoverProd = function (postId, isHover = false) {
+        if (!isHover || typeof screen.orientation === 'undefined') {
+            const post = getContentEntry(postId)
+            document.getElementById("tooltip").style.setProperty("height", "220px")
+            document.getElementById("tooltip-img").src = `/banners/${post.id}.png`
+            document.getElementById("tooltip-text").textContent = post.description
+        }
     }
 
     window.onScrollMenu = function () {
@@ -20,15 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    const time = new Date().toLocaleTimeString("fr-FR", { hour12: false });
-    let el = document.getElementById("time")
-    el.textContent = time
+    window.onClickFullScreen = function () {
+        if (document.fullscreenElement) {
+            document.exitFullscreen()
+        }
+        else {
+            document.documentElement.requestFullscreen()
+            screen.orientation.lock("landscape")
+        }
+    }
 
-    setInterval(() => {
-        const time = new Date().toLocaleTimeString("fr-FR", { hour12: false });
-        let el = document.getElementById("time")
-        el.textContent = time
-    }, 1000);
 });
 
 window.linkClicked = function (link, target) {

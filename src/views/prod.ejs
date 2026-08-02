@@ -28,7 +28,7 @@
                 background-size: cover;
                 z-index: 0;
 
-                @media (width >=60rem) {
+                @media (width >=40rem) {
                     height: 300px;
                 }
             }
@@ -41,7 +41,7 @@
                 flex-direction: row;
                 z-index: 1;
 
-                @media (width >=60rem) {
+                @media (width >=40rem) {
                     margin-top: 60px;
                 }
             }
@@ -53,7 +53,7 @@
                 background-size: cover;
                 border-style: solid;
 
-                @media (width >=60rem) {
+                @media (width >=40rem) {
                     min-width: 240px;
                     min-height: 360px;
                 }
@@ -107,7 +107,7 @@
                 color: var(--color-blanc);
             }
 
-            #header-logo {
+            .header-logo {
                 position: absolute;
                 top: 5px;
                 left: 10px;
@@ -121,7 +121,7 @@
     <div id="header">
         <div id="cover" style="<%= `background-image: url( /covers/${post.id}.png );`%>"></div>
         <div id="header-infos">
-            <h1 class="glow">
+            <h1 class="glow electric wiggle">
                 <%= post.title %>
             </h1>
             <%= post.year %>

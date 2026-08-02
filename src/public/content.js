@@ -18,12 +18,12 @@ export function searchContent(pattern) {
     let curShelfMatchingPosts = 0
 
     if (pattern.length > 0) {
-        document.getElementById("slideshow").style.setProperty("display", "none")
+        document.getElementById("about-container").style.setProperty("display", "none")
         document.getElementById("search-bar").classList.add("has-content")
         document.getElementById("search-cross").classList.add("has-content")
     }
     else {
-        document.getElementById("slideshow").style.setProperty("display", "block")
+        document.getElementById("about-container").style.setProperty("display", "flex")
         document.getElementById("search-bar").classList.remove("has-content")
         document.getElementById("search-cross").classList.remove("has-content")
     }

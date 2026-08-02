@@ -48,9 +48,9 @@
         Mentions légales
     </a>
     <a href="https://discord.gg/barricade" target="_blank" rel="noopener noreferrer" id="footer-join" class="btn"
-        aria-label="Rejoins le collectif">
+        aria-label="Rejoindre le Discord">
         <img src="/assets/discord.svg" alt="Discord Logo" class="icon-img" />
-        Rejoins le collectif !
+        Rejoindre le Discord
     </a>
 </div>
 
@@ -63,27 +63,23 @@
         box-shadow: 0 0 0.5vh var(--color-noir);
         display: flex;
         align-items: center;
-        position: fixed;
-        bottom: 0;
         width: 100%;
         box-sizing: border-box;
-        font-size: 2vh;
     }
-
-    #footer-rs>a>.icon-img {
-        height: 4vh;
-        width: 4vh;
-    }
-
 
     #footer-rs {
         display: none;
         align-items: center;
-        gap: 1vh;
+        gap: min(2vh, 0.5rem);
 
-        @media (width >=60rem) {
+        @media (width >=40rem) {
             display: flex;
         }
+    }
+
+    #footer-rs>a>.icon-img {
+        height: min(4vh, 1.5rem);
+        width: min(4vh, 1.5rem);
     }
 
     .icon {
