@@ -1,0 +1,13 @@
+<div class="shelf-small" id="<%= `key-${shelf}` %>">
+    <% posts.forEach((post,index)=> {%>
+        <a id="<%= post.id %>" aria-label="<%= post.title %>" onmouseleave="return onLeaveProd();"
+            onmouseover="return onHoverProd(this.id, true);" onfocusout="return onLeaveProd();" class="shelf-small-post"
+            href="<%- post.access[0].link %>" target="_blank">
+            <img width="50px" style="filter: invert();" src="<%= icon %>">
+            <div class="shelf-small-post-title">
+                <span><%= post.year %> | </span>
+                <b><%= post.title %></b>
+            </div>
+        </a>
+        <% });%>
+</div>

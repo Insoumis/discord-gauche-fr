@@ -4,10 +4,9 @@ import { getContentEntry, searchContent, resetSearchContent } from "/content.js"
 document.addEventListener("DOMContentLoaded", () => {
 
     window.onHoverProd = function (postId, isHover = false) {
-        if (!isHover || typeof screen.orientation === 'undefined') {
+        if (!isHover || typeof screen.orientation !== 'undefined') {
             const post = getContentEntry(postId)
-            document.getElementById("tooltip").style.setProperty("height", "220px")
-            document.getElementById("tooltip-img").src = `/banners/${post.id}.png`
+            document.getElementById("tooltip").classList.add("visible")
             document.getElementById("tooltip-text").textContent = post.description
         }
     }
@@ -43,7 +42,7 @@ window.linkClicked = function (link, target) {
 
 
 window.onLeaveProd = function () {
-    document.getElementById("tooltip").style.setProperty("height", "0")
+    document.getElementById("tooltip").classList.remove("visible")
 }
 
 window.searchTyping = function (search) {

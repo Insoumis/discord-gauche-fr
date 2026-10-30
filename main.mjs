@@ -19,8 +19,6 @@ export const main = async () => {
     await fs.writeFile(`${DIST}/index.html`, html, { flag: 'w' }, err => {
         if (err) {
             console.error(err);
-        } else {
-            // file written successfully
         }
     });
 
@@ -28,28 +26,22 @@ export const main = async () => {
     await fs.writeFile(`${DIST}/legal.html`, html, { flag: 'w' }, err => {
         if (err) {
             console.error(err);
-        } else {
-            // file written successfully
         }
     });
 
-    for (let post of CONTENT.entries) {
+    for (let post of [...POSTS.games, ...POSTS.websites]) {
         html = await ejs.renderFile(`${VIEWS}/prod.ejs`, { post });
         await fs.writeFile(`${DIST}/prods/${post.id}.html`, html, { flag: 'w' }, err => {
             if (err) {
                 console.error(err);
-            } else {
-                // file written successfully
             }
         });
     }
 
-    html = await ejs.renderFile(`${VIEWS}/sitemap.ejs`, { posts: CONTENT.entries });
+    html = await ejs.renderFile(`${VIEWS}/sitemap.ejs`, { posts: [...POSTS.games, ...POSTS.websites] });
     await fs.writeFile(`${DIST}/sitemap.xml`, html, { flag: 'w' }, err => {
         if (err) {
             console.error(err);
-        } else {
-            // file written successfully
         }
     });
 
@@ -60,8 +52,6 @@ export const main = async () => {
     await fs.writeFile(`${DIST}/content.js`, contentScript, { flag: 'w' }, err => {
         if (err) {
             console.error(err);
-        } else {
-            // file written successfully
         }
     });
 

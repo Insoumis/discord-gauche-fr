@@ -49,18 +49,6 @@
                 font-size: x-large;
             }
 
-            #slideshow {
-                z-index: -1;
-                position: absolute;
-                inset: 0;
-                display: block;
-
-                @media (width >=40rem) {
-                    min-height: 100%;
-                    overflow: hidden;
-                }
-            }
-
             #about-container {
                 @media (width >=40rem) {
                     top: 0;
@@ -224,7 +212,7 @@
                         <img src="/assets/LOGO C BARRICADE BLANC.svg" class="glowbox electric" />
                     </div>
                     <div id="about-description">
-                        <h1 class="glow">N'ATTENDEZ PAS LES
+                        <h1 class="glow electric">N'ATTENDEZ PAS LES
                             CONSIGNES</h1>
                         <b style="font-size: 3vh;">ㄥ</b>a Barricade <a target="_blank"
                             style="color: var(--color-blanc);"
@@ -248,7 +236,7 @@
                     </div>
                 </div>
                 <div id="about-buttons">
-                    <a href="https://discord.gg/barricade" target="_blank" rel="noopener noreferrer"
+                    <a href="https://discord.gg/CrJSpSnmhD" target="_blank" rel="noopener noreferrer"
                         id="main-btn-discord" class="btn" aria-label="Rejoins le discord">
                         <img src="/assets/discord.svg" alt="Discord Logo" class="icon-img" />
                         REJOINDRE LE DISCORD
@@ -260,9 +248,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div id="slideshow">
-            <%- include('components/SlideShow', {posts: content.entries }); %>
-        </div> -->
 
         <h1 id="featured" style="margin-top: 4rem; scroll-margin-top: 4rem;" class="category">
             <img src="/assets/icons/star.svg" class="icon-img" /> Les Incontournables
@@ -282,33 +267,24 @@
 
                 <h1 id="websites" class="category">
                     <img src="/assets/icons/internet.svg" class="icon-img" /> Les Sites/Outils Web
-                    <hr /><a aria-label="Lien rapide vers les sons" href="#music">
+                    <hr /><a aria-label="Lien rapide vers les sons" href="#plus">
                         <img src="/assets/icons/angledown.svg" class="icon-img" />
                     </a>
                 </h1>
                 <%- include('components/Shelf', {posts: posts.websites, shelf: "websites" }); %>
-                    <h1 id="music" class="category">
-                        <img src="/assets/icons/headphones.svg" class="icon-img" /> Les Sons
-                        <hr /><a aria-label="Lien rapide vers les visuels" href="#images">
-                            <img src="/assets/icons/angledown.svg" class="icon-img" />
+                    <h1 id="plus" class="category">
+                        <img src="/assets/icons/disc.svg" class="icon-img" /> Archives
+                        <hr /><a aria-label="Retourner en haut" href="#featured">
+                            <img src="/assets/icons/chevronup.svg" class="icon-img" />
                         </a>
                     </h1>
-                    <%- include('components/Shelf', {posts: posts.music, shelf: "music" }); %>
-                        <h1 id="images" class="category">
-                            <img src="/assets/icons/palette.svg" class="icon-img" /> Les Visuels
-                            <hr /><a aria-label="Lien rapide vers les montages" href="#videos">
-                                <img src="/assets/icons/angledown.svg" class="icon-img" />
-                            </a>
-                        </h1>
-                        <%- include('components/Shelf', {posts: posts.images, shelf: "images" }); %>
-                            <h1 id="videos" class="category">
-                                <img src="/assets/icons/film.svg" class="icon-img" /> Les Montages
-                                <hr /><a aria-label="Retourner en haut" href="#featured">
-                                    <img src="/assets/icons/chevronup.svg" class="icon-img" />
-                                </a>
-                            </h1>
-                            <%- include('components/Shelf', {posts: posts.videos, shelf: "videos" }); %>
-                                <div style="min-height: 6rem;"></div>
+                    <%- include('components/ShelfSmall', {posts: posts.music, shelf: "music" ,
+                        icon: "/assets/icons/headphones.svg" }); %>
+                        <%- include('components/ShelfSmall', {posts: posts.images, shelf: "images" ,
+                            icon: "/assets/icons/palette.svg" }); %>
+                            <%- include('components/ShelfSmall', {posts: posts.videos, shelf: "videos" ,
+                                icon: "/assets/icons/film.svg" }); %>
+                                <div style="min-height: 10rem;"></div>
 
                                 <%- include('components/Footer') %>
     </div>
