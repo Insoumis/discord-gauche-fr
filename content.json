@@ -156,7 +156,7 @@
         {
             "id": "100-jours",
             "title": "100 jours",
-            "description": "Vivez 100 jours (ou plus ?) d'une aventure politique fantastique \n𓏸𓈒✿𓂃⚠️ La Barricade considère problématiques aujourd'hui certains des personnages représentae. N'idolâtrez jamais personne uwu 𓂃✿𓈒𓏸",
+            "description": "Vivez 100 jours (ou plus ?) d'une aventure politique fantastique \n𓏸𓈒✿𓂃⚠️ La Barricade considère problématiques aujourd'hui certains des personnages représentae. Brûlez vos idôles uwu 𓂃✿𓈒𓏸",
             "year": "2022",
             "tags": [
                 "JEU",
@@ -422,7 +422,7 @@
         {
             "id": "nopasajam",
             "title": "No Pasajam!",
-            "description": "La Barricade s'est associée à des créateurices du jeu vidéo pour organiser une game jam antifasciste 🎮 34 jeux créés sans IA et pour la cause, sur une semaine !",
+            "description": "La Barricade s'est associée à des créateurices du jeu vidéo pour organiser une game jam antifasciste 🎮 123 participant·e·s, 34 jeux créés sans IA et pour la cause, le temps d'une semaine !",
             "year": "2026",
             "tags": [
                 "ANTIFA",
@@ -430,7 +430,8 @@
                 "EVENT",
                 "TABLE",
                 "LIVE",
-                "STREAM"
+                "STREAM",
+                "NO AI"
             ],
             "access": [
                 {
