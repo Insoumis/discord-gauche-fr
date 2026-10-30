@@ -57,6 +57,20 @@ export function searchContent(pattern) {
         }
         else { post.setAttribute("hidden", "true") }
     };
+    prevShelf = null
+    for (let post of document.getElementsByClassName("shelf-small-post")) {
+        if (matches.length === 0) {
+            post.style.setProperty("display", "flex")
+        }
+        else if (matches.indexOf(post.id) >= 0) {
+            console.log("affirmatif")
+            post.style.setProperty("display", "flex")
+        }
+        else {
+            console.log("et la ?")
+            post.style.setProperty("display", "none")
+        }
+    };
 }
 
 
@@ -74,7 +88,7 @@ if (searchQuery && searchQuery.length > 0) {
         .toUpperCase())
 }
 
-document.onkeydown = function(e) {
+document.onkeydown = function (e) {
     if (e.ctrlKey && e.keyCode === 70) {
         document.getElementById("search-bar").focus()
         return false;

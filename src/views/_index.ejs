@@ -241,7 +241,7 @@
                         <img src="/assets/discord.svg" alt="Discord Logo" class="icon-img" />
                         REJOINDRE LE DISCORD
                     </a>
-                    <a href="#featured" class="btn" aria-label="Découvre les créations">
+                    <a href="#incontournables" class="btn" aria-label="Découvre les créations">
                         <img src="/assets/icons/angledown.svg" alt="Discord Logo" class="icon-img" />
                         NOS CRÉATIONS
                     </a>
@@ -249,32 +249,32 @@
             </div>
         </div>
 
-        <h1 id="featured" style="margin-top: 4rem; scroll-margin-top: 4rem;" class="category">
+        <h1 id="incontournables" style="margin-top: 4rem; scroll-margin-top: 4rem;" class="category">
             <img src="/assets/icons/star.svg" class="icon-img" /> Les Incontournables
-            <hr /><a aria-label="Lien rapide vers les jeux" href="#games">
+            <hr /><a aria-label="Lien rapide vers les jeux" href="#jeux">
                 <img src="/assets/icons/angledown.svg" class="icon-img" />
             </a>
         </h1>
         <%- include('components/Shelf', {posts: posts.featured, emphasis: true, shelf: "featured" }); %>
 
-            <h1 id="games" class="category">
+            <h1 id="jeux" class="category">
                 <img src="/assets/icons/gamepad.svg" class="icon-img" /> Les Jeux
-                <hr /><a aria-label="Lien rapide vers les sites web" href="#websites">
+                <hr /><a aria-label="Lien rapide vers les sites web" href="#applications">
                     <img src="/assets/icons/angledown.svg" class="icon-img" />
                 </a>
             </h1>
             <%- include('components/Shelf', {posts: posts.games, shelf: "games" }); %>
 
-                <h1 id="websites" class="category">
+                <h1 id="applications" class="category">
                     <img src="/assets/icons/internet.svg" class="icon-img" /> Les Sites/Outils Web
-                    <hr /><a aria-label="Lien rapide vers les sons" href="#plus">
+                    <hr /><a aria-label="Lien rapide vers les sons" href="#archives">
                         <img src="/assets/icons/angledown.svg" class="icon-img" />
                     </a>
                 </h1>
                 <%- include('components/Shelf', {posts: posts.websites, shelf: "websites" }); %>
-                    <h1 id="plus" class="category">
-                        <img src="/assets/icons/disc.svg" class="icon-img" /> Archives
-                        <hr /><a aria-label="Retourner en haut" href="#featured">
+                    <h1 id="archives" class="category">
+                        <img src="/assets/icons/disc.svg" class="icon-img" /> Les Archives
+                        <hr /><a aria-label="Retourner en haut" href="#incontournables">
                             <img src="/assets/icons/chevronup.svg" class="icon-img" />
                         </a>
                     </h1>

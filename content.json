@@ -3,7 +3,7 @@
         {
             "id": "laec-fr",
             "title": "LAEC.FR",
-            "description": "Le site du programme : l'Avenir en Commun",
+            "description": "Le site du programme 2022 : l'Avenir en Commun",
             "year": "2022",
             "tags": [
                 "PROGRAMME",
@@ -245,7 +245,7 @@
         },
         {
             "id": "melenchon-v-zemmour",
-            "title": "Mélenchon VS zob",
+            "title": "Mélenchon VS Zemmour",
             "description": "De l'époque où les fermes à bots zobistes tournaient à plein régime",
             "year": "2021",
             "tags": [
@@ -418,15 +418,64 @@
                     "icon": "play"
                 }
             ]
+        },
+        {
+            "id": "nopasajam",
+            "title": "No Pasajam!",
+            "description": "La Barricade s'est associée à des créateurices du jeu vidéo pour organiser une game jam antifasciste 🎮 34 jeux créés sans IA et pour la cause, sur une semaine !",
+            "year": "2026",
+            "tags": [
+                "ANTIFA",
+                "EVENEMENT",
+                "EVENT",
+                "TABLE",
+                "LIVE",
+                "STREAM"
+            ],
+            "access": [
+                {
+                    "link": "https://itch.io/jam/nopasajam/entries",
+                    "title": "Découvrir les jeux (itch.io)",
+                    "icon": "pointer"
+                },
+                {
+                    "link": "https://www.youtube.com/@NoPasajam",
+                    "title": "Les tables rondes de l'événement",
+                    "icon": "play"
+                }
+            ]
+        },
+        {
+            "id": "faites-mieux",
+            "title": "FaitesMieux.fr",
+            "description": "La plateforme ultime de formation et de ressources militantes",
+            "year": "2026",
+            "tags": [
+                "application",
+                "site",
+                "web",
+                "quizz",
+                "guide",
+                "jeu"
+            ],
+            "access": [
+                {
+                    "link": "https://faitesmieux.fr/",
+                    "title": "Accéder au site",
+                    "icon": "pointer"
+                }
+            ]
         }
     ],
     "shelves": {
         "featured": [
+            "nopasajam",
             "laec-fr",
             "fiscal-kombat",
             "toktok"
         ],
         "games": [
+            "nopasajam",
             "foule-populaire",
             "laec-est-toi",
             "fiscal-kombat",
@@ -436,8 +485,9 @@
         "websites": [
             "laec-fr",
             "toktok",
-            "boussole-gaza",
+            "faites-mieux",
             "melenshack",
+            "boussole-gaza",
             "interpelmail",
             "la-manufacture"
         ],

@@ -103,12 +103,11 @@
 .shelf-small {
     display: flex;
     flex-direction: column;
-    gap: 1vh;
-    margin: 1vh;
 }
 
 .shelf-small-post {
     flex: 1;
+    margin: 1vh;
     gap: 1vh;
     display: flex;
     flex-direction: row;
