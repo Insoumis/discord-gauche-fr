@@ -72,7 +72,7 @@ export const getComments = async () => {
             curList = curList.descendants ? curList.descendants.map(({
                 id, url, created_at, favourites_count, content, account, media_attachments
             }) => ({
-                id, url, created_at, favourites_count, content, username: account.username, acct: account.acct, avatar: account.avatar, media_attachments: media_attachments.map(({ type, preview_url, description }) => ({ type, preview_url, description }))
+                id, url, created_at, favourites_count, content, display_name: account.display_name, acct: account.acct, avatar: account.avatar, media_attachments: media_attachments.map(({ type, preview_url, description }) => ({ type, preview_url, description }))
             })) : []
             curPost = await fetch(`https://piaille.fr/api/v1/statuses/${post.mastodon}`)
             if (curPost.ok) {
