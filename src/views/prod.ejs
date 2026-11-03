@@ -76,7 +76,8 @@
 
 
             #header-infos>a {
-                font-weight: bold;
+                font-weight:bolder;
+                font-family: Mohave;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -197,14 +198,10 @@
             <% post.access.forEach((btn)=> {%>
                 <a class="prod-link btn" href="<%= btn.link %>" target="_blank" rel="noopener noreferrer"
                     aria-label="<%= btn.title %>">
-                    <% if (btn.icon==='pointer' ) { %>
-                        <img src="/assets/icons/pointer.svg" class="icon-img" />
-                        <% } else if (btn.icon==='download' ) { %>
-                            <img src="/assets/icons/download.svg" class="icon-img" />
-                            <% } else if (btn.icon==='play' ) { %>
-                                <img src="/assets/icons/play.svg" class="icon-img" />
-                                <% } %>
-                                    <%= btn.title %>
+                    <% if (['pointer', 'download' , 'play' , 'star' ].includes(btn.icon) ) { %>
+                        <img src="/assets/icons/<%= btn.icon %>.svg" class="icon-img" />
+                        <% } %>
+                            <%= btn.title %>
                 </a>
                 <% });%>
 

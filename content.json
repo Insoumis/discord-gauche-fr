@@ -54,7 +54,8 @@
                     "title": "Bande Annonce",
                     "icon": "play"
                 }
-            ]
+            ],
+            "mastodon": "117553765552483466"
         },
         {
             "id": "fiscal-kombat-2",
@@ -341,7 +342,7 @@
         {
             "id": "toktok",
             "title": "TokTok",
-            "description": "L'application de suivi de porte-à-porte intégrée à Action Populaire",
+            "description": "L'application de suivi de porte-à-porte intégrée à Action Populaire ! De loin le logiciel le plus complexe du Discord, il est maintenu et amélioré par l'équipe de la Manufacture. \nLes dons sont ouverts pour soutenir les coûts d'infra !",
             "year": "2022",
             "tags": [
                 "TERRAIN",
@@ -353,6 +354,11 @@
                     "link": "https://toktok.actionpopulaire.fr/",
                     "title": "Ouvrir TokTok",
                     "icon": "pointer"
+                },
+                {
+                    "link": "https://dons.la-manufacture.io/",
+                    "title": "Soutenir",
+                    "icon": "star"
                 }
             ]
         },
@@ -443,9 +449,13 @@
                     "link": "https://www.youtube.com/@NoPasajam",
                     "title": "Les tables rondes de l'événement",
                     "icon": "play"
+                },
+                {
+                    "link": "https://nopasajam.org/",
+                    "title": "Tous les liens",
+                    "icon": "pointer"
                 }
-            ],
-            "mastodon": "116602046209778737"
+            ]
         },
         {
             "id": "faites-mieux",
@@ -464,6 +474,27 @@
                 {
                     "link": "https://faitesmieux.fr/",
                     "title": "Accéder au site",
+                    "icon": "pointer"
+                }
+            ]
+        },
+        {
+            "id": "trailer-2018",
+            "title": "Le vieux trailer du Discord",
+            "description": "Qualité Top+",
+            "year": "2018",
+            "tags": [
+                "discord",
+                "insoumis",
+                "2017",
+                "jlm",
+                "fiscal kombat",
+                "presentation"
+            ],
+            "access": [
+                {
+                    "link": "https://x.com/DiscordGauche/status/961938199038906369",
+                    "title": "Accéder à la vidéo via X",
                     "icon": "pointer"
                 }
             ]
@@ -501,7 +532,8 @@
         ],
         "videos": [
             "global-sumud-2025",
-            "melenchon-v-zemmour"
+            "melenchon-v-zemmour",
+            "trailer-2018"
         ],
         "images": [
             "rassemblement-nepotiste",
