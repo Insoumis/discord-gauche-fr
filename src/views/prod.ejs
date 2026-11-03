@@ -74,6 +74,22 @@
                 text-transform: uppercase;
             }
 
+
+            #header-infos>a {
+                font-weight: bold;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--color-rouge);
+                width: 5rem;
+                padding: 0.2rem;
+                border-radius: 100rem;
+                gap: 0.2rem;
+                font-size: 1.2rem;
+                margin-bottom: 0.6rem;
+            }
+
             #prod-content {
                 flex: 1;
                 padding: 20px;
@@ -103,7 +119,7 @@
             }
 
             .prod-link {
-                background-color: var(--color-violet);
+                background-color: var(--color-rouge);
                 color: var(--color-blanc);
             }
 
@@ -111,6 +127,44 @@
                 position: absolute;
                 top: 5px;
                 left: 10px;
+            }
+
+            #prod-comments {
+                margin-top: 50px;
+                transform: matrix(0.95, 0.02, 0, 0.95, 1, 0);
+                padding: 0.5rem;
+                border: 1px solid var(--color-violet);
+                background-color: var(--color-violet);
+            }
+
+
+            .prod-comment-author {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .prod-comment-author>img {
+                width: 50px;
+            }
+
+            .prod-comment-name {
+                display: flex;
+                flex-direction: column;
+                padding-left: 0.2rem;
+            }
+
+            .prod-comment {
+                margin-top: 0.5rem;
+                background-color: black;
+                padding: 0.4rem;
+
+                a {
+                    color: var(--color-rouge);
+                }
+
+                img {
+                    max-width: 100%;
+                }
             }
         </style>
 </head>
@@ -121,10 +175,17 @@
     <div id="header">
         <div id="cover" style="<%= `background-image: url( /covers/${post.id}.png );`%>"></div>
         <div id="header-infos">
-            <h1 class="glow electric wiggle">
-                <%= post.title %>
-            </h1>
-            <%= post.year %>
+            <% if (post.comments !==undefined) {%>
+                <a class="btn" href="<%= post.comments.status.url %>" target="_blank"
+                    aria-label="Ajouter un fav sur Mastodon">
+                    <img src="/assets/icons/star.svg" class="icon-img" />
+                    <%= post.comments.status.favourites_count %>
+                </a>
+                <% } %>
+                    <h1 class="glow electric wiggle">
+                        <%= post.title %>
+                    </h1>
+                    <%= post.year %>
         </div>
     </div>
     <div id="prod-content">
@@ -148,6 +209,41 @@
                 <% });%>
 
         </div>
+        <% if (post.comments !==undefined) {%>
+            <div id="prod-comments">
+                <a class="btn" aria-label="Voir les commentaires sur Mastodon" href="<%= post.comments.status.url %>"
+                    target="_blank" style="display: flex; justify-content: flex-start; gap:0.2rem; padding: 0;">
+                    <img src="/assets/masto.png" alt="Mastodon Logo" class="icon-img" /> <b>
+                        Commentaires
+                    </b>
+                </a>
+                <% for (comment of post.comments.list) { %>
+                    <div class="prod-comment">
+                        <div class="prod-comment-author">
+                            <img src="<%= comment.avatar %>">
+                            <div class="prod-comment-name">
+                                <b>
+                                    <%= comment.username %>
+                                </b>
+                                <i>
+                                    <%= comment.acct %>
+                                </i>
+                            </div>
+                        </div>
+                        <div><%- comment.content %></div>
+                        <% if (comment.media_attachments.length> 0 && comment.media_attachments[0].type ===
+                            "image") {%>
+                            <img aria-label="<%= comment.media_attachments[0].description %>"
+                                src="<%= comment.media_attachments[0].preview_url %>">
+                            <% } %>
+                    </div>
+                    <% } %>
+                        <a aria-label="Ajouter un commentaire sur Mastodon" style="width: 200px; margin-top: 1vh;"
+                            class="btn prod-link" href="<%= post.comments.status.url %>" target="_blank">
+                            Ajouter un commentaire
+                        </a>
+            </div>
+            <% } %>
     </div>
     <%- include('components/Header', {simplified: true}) %>
 </body>

@@ -1,6 +1,7 @@
 import fs from 'node:fs'
 
 export const CONTENT = JSON.parse(fs.readFileSync('./content.json'));
+export const COMMENTS = fs.existsSync('./comments.json') ? JSON.parse(fs.readFileSync('./comments.json')) : []
 
 export function getContentEntry(id, entries = CONTENT.entries) {
     if (!id) return null
@@ -13,7 +14,7 @@ export function getContent() {
     for (const [shelf, posts] of Object.entries(CONTENT.shelves)) {
         content[shelf] = []
         for (const post of posts) {
-            content[shelf].push(getContentEntry(post))
+            content[shelf].push({ ...getContentEntry(post), comments: COMMENTS[post] })
         }
     }
     return content

@@ -15,6 +15,7 @@ src/public/banners/*
 src/public/covers/*
 src/public/images/*
 src/public/resources/*
+comments.json
 
 # Editor directories and files
 .vscode/*

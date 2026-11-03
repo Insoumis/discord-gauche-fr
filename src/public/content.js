@@ -63,11 +63,9 @@ export function searchContent(pattern) {
             post.style.setProperty("display", "flex")
         }
         else if (matches.indexOf(post.id) >= 0) {
-            console.log("affirmatif")
             post.style.setProperty("display", "flex")
         }
         else {
-            console.log("et la ?")
             post.style.setProperty("display", "none")
         }
     };

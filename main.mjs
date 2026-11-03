@@ -6,6 +6,7 @@ const VIEWS = "./src/views"
 const DIST = "./dist"
 
 const POSTS = getContent()
+const MAIN_POSTS = [...POSTS.games, ...POSTS.websites]
 
 export const main = async () => {
     if (!fs.existsSync(DIST)) {
@@ -29,7 +30,7 @@ export const main = async () => {
         }
     });
 
-    for (let post of [...POSTS.games, ...POSTS.websites]) {
+    for (let post of MAIN_POSTS) {
         html = await ejs.renderFile(`${VIEWS}/prod.ejs`, { post });
         await fs.writeFile(`${DIST}/prods/${post.id}.html`, html, { flag: 'w' }, err => {
             if (err) {
@@ -38,7 +39,7 @@ export const main = async () => {
         });
     }
 
-    html = await ejs.renderFile(`${VIEWS}/sitemap.ejs`, { posts: [...POSTS.games, ...POSTS.websites] });
+    html = await ejs.renderFile(`${VIEWS}/sitemap.ejs`, { posts: MAIN_POSTS });
     await fs.writeFile(`${DIST}/sitemap.xml`, html, { flag: 'w' }, err => {
         if (err) {
             console.error(err);
@@ -56,4 +57,34 @@ export const main = async () => {
     });
 
     console.log(new Date().toLocaleTimeString(), "Build ok.")
+}
+
+export const getComments = async () => {
+    let curList
+    let curPost
+    let comments = {}
+    for (let post of MAIN_POSTS) {
+        if (post.mastodon !== undefined) {
+            curList = await fetch(`https://piaille.fr/api/v1/statuses/${post.mastodon}/context`)
+            if (curList.ok) {
+                curList = await curList.json()
+            }
+            curList = curList.descendants ? curList.descendants.map(({
+                id, url, created_at, favourites_count, content, account, media_attachments
+            }) => ({
+                id, url, created_at, favourites_count, content, username: account.username, acct: account.acct, avatar: account.avatar, media_attachments: media_attachments.map(({ type, preview_url, description }) => ({ type, preview_url, description }))
+            })) : []
+            curPost = await fetch(`https://piaille.fr/api/v1/statuses/${post.mastodon}`)
+            if (curPost.ok) {
+                curPost = await curPost.json()
+                curPost = { url: curPost.url, replies_count: curPost.replies_count, reblogs_count: curPost.reblogs_count, favourites_count: curPost.favourites_count }
+            }
+            comments[post.id] = { status: curPost, list: curList }
+        }
+    }
+    await fs.writeFile(`./comments.json`, JSON.stringify(comments), { flag: 'w' }, err => {
+        if (err) {
+            console.error(err);
+        }
+    });
 }

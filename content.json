@@ -422,7 +422,7 @@
         {
             "id": "nopasajam",
             "title": "No Pasajam!",
-            "description": "La Barricade s'est associée à des créateurices du jeu vidéo pour organiser une game jam antifasciste 🎮 123 participant·e·s, 34 jeux créés sans IA et pour la cause, le temps d'une semaine !",
+            "description": "La Barricade s'est associée à des créateurices du jeu vidéo pour organiser une game jam antifasciste 🎮 \n123 participant·e·s, 34 jeux créés sans IA et pour la cause, le temps d'une semaine !",
             "year": "2026",
             "tags": [
                 "ANTIFA",
@@ -444,7 +444,8 @@
                     "title": "Les tables rondes de l'événement",
                     "icon": "play"
                 }
-            ]
+            ],
+            "mastodon": "116602046209778737"
         },
         {
             "id": "faites-mieux",
