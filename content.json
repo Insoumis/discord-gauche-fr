@@ -87,11 +87,6 @@
                     "link": "/resources/FiscalKombat2Trailer.mp4",
                     "title": "Bande Annonce",
                     "icon": "play"
-                },
-                {
-                    "link": "https://soundcloud.com/precheurius/sets/fiscal-kombat-eu-edition",
-                    "title": "La bande originale sur Soundcloud",
-                    "icon": "play"
                 }
             ],
             "mastodon": "117557873862748581"
@@ -494,8 +489,8 @@
             ],
             "access": [
                 {
-                    "link": "https://x.com/DiscordGauche/status/961938199038906369",
-                    "title": "Accéder à la vidéo via X",
+                    "link": "https://www.youtube.com/watch?v=7P70BEnmP5s",
+                    "title": "Accéder à la vidéo via Youtube",
                     "icon": "pointer"
                 }
             ]
